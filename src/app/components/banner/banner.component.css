@@ -1,0 +1,26 @@
+#cerezoblanco{
+    width: 980px;
+    height: 600px;
+}
+.text{
+    color: #b12e60;
+    position:absolute;
+    top: 260px;
+    left: 200px;
+}
+
+h1, h3, h4{
+    background-color: rgba(255, 255, 255, 0);
+}   
+
+/*estilo para celular y tablets*/
+@media (max-width: 575px){
+    .green{
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    top: 133px;
+    left: 34px;
+    color: #b12e60;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+}
