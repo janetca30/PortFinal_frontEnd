@@ -4,6 +4,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+h2{
+    text-align: center;
+}
+.proyectos{
+    padding-top: 25px;
+    padding-right: 550px;
+    padding-top: 150px;
+}
 .row{
     padding-left: 80px;
 }
@@ -22,12 +30,13 @@
     min-height: 350px;
 }
 .slider-contenedor{
-    width: 1000px;
+    margin-top: 25px;
+    width: 750px;
     overflow: hidden;
     margin-left: 100px;
     margin-bottom: auto;
     font-style: inherit;
-    color: #0caf1d;
+    color: #0a0a0a;
     text-align: center;
 }
 .slider-contenedor ul{

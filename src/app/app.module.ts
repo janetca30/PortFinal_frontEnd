@@ -12,6 +12,7 @@ import { AcercadeComponent } from './components/acercade/acercade.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { FondoComponent } from './components/fondo/fondo.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
     AcercadeComponent,
     SkillsComponent,
     FooterComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    FondoComponent
   ],
   imports: [
     BrowserModule,
