@@ -1,7 +1,27 @@
 #cerezoblanco{
-    width: 980px;
-    height: 600px;
+    width: 1200px;
+    height: 550px;
+    margin-top: 20px;
+
 }
+.imgbanner{
+    display:flex;
+    justify-content: center;
+    background: black;
+}
+.lista{
+    position: absolute;
+    top: 125px;
+}
+a{
+    color: #c51a51;
+    background-color: black;
+}
+
+li.list-group-item.\.flex-fill{
+    background-color: black;
+}
+
 .text{
     color: #b12e60;
     position:absolute;
