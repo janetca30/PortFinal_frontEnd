@@ -2,7 +2,7 @@
     <section id="navbar">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand">
+                <a class="navbar-brand" href="">
                     <img src="../../../assets/imagen/ArgPr.png" id="ArgPr">
                 </a>
                     <ul class="list-group list-group-horizontal">
@@ -18,18 +18,27 @@
                             </a>
                         </li>
                         <li class="list-group-item redes">
-                            <a href="https://www.linkedin.com/in/janet-calderon-559ab6240/" target="_blank">
+                            <a href="https://www.linkedin.com/in/janet-calderon-559ab6240/" target="_blank" >
                                 <img src="../../../assets/imagen/redes/blinkedin.png">
                             </a>
-                        </li>
-                        <!--Button modal-->
-                        <li class="list-group-item redes">
-                            <a href="">
-                                <img src="../../../assets/imagen/add-lock.png" id="bloqueo">
-                                <img src="../../../assets/imagen/desbloqueo.png" id="desbloqueo">
-                            </a>
-                        </li>
+                        </li>                        
                     </ul>                    
+            </div>
+            <div 
+            class="blogin"
+            (click)="toggleSidebar()">            
+                <ul class="list-group list-group-horizontal" >
+                    <li class="list-group-item redes " [ngClass]="{}">
+                        <a href="/login">
+                            <img src="../../../assets/imagen/add-lock.png" id="bloqueo" routerLink="/login">                                
+                        </a>
+                    </li>
+                    <li class="list-group-item redes">
+                        <a href="/registro">
+                            <img src="../../../assets/imagen/desbloqueo.png" id="desbloqueo">
+                        </a>
+                    </li>  
+                </ul>                 
             </div>
         </nav>
     </section>

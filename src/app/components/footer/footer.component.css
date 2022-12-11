@@ -1,3 +1,7 @@
-.footer{
-    margin-top: 35px;
+footer{
+    background-color: #c51a51;
+    padding-top: 25px;
+}
+strong{
+    color: black;
 }

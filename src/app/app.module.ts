@@ -13,6 +13,11 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { FondoComponent } from './components/fondo/fondo.component';
+import { EdicomponentComponent } from './edicomponent/edicomponent.component';
+import { AgregarcomComponent } from './edicomponent/agregarcom/agregarcom.component';
+import { BorrarcomComponent } from './edicomponent/borrarcom/borrarcom.component';
+import { LimpiarComponent } from './edicomponent/limpiar/limpiar.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,13 @@ import { FondoComponent } from './components/fondo/fondo.component';
     SkillsComponent,
     FooterComponent,
     PortfolioComponent,
-    FondoComponent
+    FondoComponent,
+    EdicomponentComponent,
+    AgregarcomComponent,
+    BorrarcomComponent,
+    LimpiarComponent,
+    LoginComponent,
+    
   ],
   imports: [
     BrowserModule,
