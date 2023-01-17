@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { persona } from 'src/app/model/persona';
 
 @Component({
   selector: 'app-banner',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent {
+  @Input() personaData?: persona;
+
+  showTitle(){
+    const el = document.querySelector('#heroText');
+    el?.classList.remove('hidetext', 'opacity-0');
+  }
+
+  ngOnInit(){
+    setTimeout(this.showTitle, 200)
+  }
+
 
 }

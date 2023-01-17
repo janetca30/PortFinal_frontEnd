@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -13,11 +12,18 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { FondoComponent } from './components/fondo/fondo.component';
-import { EdicomponentComponent } from './edicomponent/edicomponent.component';
-import { AgregarcomComponent } from './edicomponent/agregarcom/agregarcom.component';
-import { BorrarcomComponent } from './edicomponent/borrarcom/borrarcom.component';
-import { LimpiarComponent } from './edicomponent/limpiar/limpiar.component';
 import { LoginComponent } from './login/login.component';
+import { RegistroCompComponent } from './registro-comp/registro-comp.component';
+import { Error404Component } from './error404/error404.component';
+import { PersonaService } from '../app/service/persona.service';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { interceptorProvider } from './service/interceptor.service';
+import { NewExperienciaComponent } from './components/experiencia/new-experiencia/new-experiencia.component';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -32,18 +38,21 @@ import { LoginComponent } from './login/login.component';
     FooterComponent,
     PortfolioComponent,
     FondoComponent,
-    EdicomponentComponent,
-    AgregarcomComponent,
-    BorrarcomComponent,
-    LimpiarComponent,
     LoginComponent,
+    RegistroCompComponent,
+    Error404Component,
+    NewExperienciaComponent,
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
+    
   ],
-  providers: [],
+  providers: [PersonaService, 
+  interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

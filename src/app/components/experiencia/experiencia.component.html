@@ -1,13 +1,13 @@
 <!--Experiencia-->
-<section class="experiencia">
+<section class="experiencia" id="experiencia">
     <div class="container">
         <div class="row">
             <div class="col-4">
                 <div class="box">
                     <div class="row">
-                        <div class="col-6">
-                            <h4><p>Independiente</p></h4>
-                            <h5><p><i>Cerrajeria Rosario</i></p></h5>
+                        <div class="col-6" *ngFor="let Experiencia of expe">
+                            <h4><p>{{Experiencia.nombreE}}</p></h4>
+                            <h5><p><i>{{Experiencia.descripcionE}}</i></h5>
                             <h5><p><i>Diseño</i></p></h5>
                             <h5><p>Inicio: 2022</p></h5>
                             <h5><p>Termino: 2022</p></h5>
@@ -20,13 +20,16 @@
             </div>
             <div class="col-4">
                 <a href="#"><h2><b><i>Experiencia</i></b></h2></a>
+                <button type="submit" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
+                    Nueva Experiencia
+                </button>
             </div>
             <div class="col-4">
                 <div class="box">
                     <div class="row">
                         <div class="col-6">
                             <h4><p>Independiente</p></h4>
-                            <h5><p><i>Cerrajeria Rosario</i></p></h5>
+                            <h5><p><i>Ja.net</i></p></h5>
                             <h5><p><i>Diseño</i></p></h5>
                             <h5><p>Inicio: 2022</p></h5>
                             <h5><p>Termino: 2022</p></h5>

@@ -1,0 +1,156 @@
+{
+    "nombre": "Janet",
+    "apellido": "Calderon Acuña de Denis",
+    "puesto": "Desarrollador Full Stack Jr.",
+    "redes": [
+        {
+            "id": 1,
+            "icono": "../../../assets/imagen/redes/bwhatsapp.png",
+            "url": "https://api.whatsapp.com/send?phone=3415086762",
+            "nombre": "whatsap"
+        },
+        {
+            "id": 2,
+            "icono": "../../../assets/imagen/redes/bgithub.png",
+            "url": "https://github.com/janetca30",
+            "nombre": "github"
+        },
+        {
+            "id": 3,
+            "icono": "../../../assets/imagen/redes/blinkedin.png",
+            "url": "https://www.linkedin.com/in/janet-calderon-559ab6240/",
+            "nombre": "linkedin"
+        }
+    ],
+    "banner": "../../../assets/imagen/cerezoblanco.jpg",
+    "acerca de mi": "Estudie Contabilidad, trabaje como Administrativa por muchos años hasta llegue a ser Directora de una Empresa; mi pasión por la tecnología me lleva ahora hacia un nuevo desafío. Soy una persona responsable, multifacética, creativa, emprendedora con muchas ganas de seguir desarrollandome personal y profesionalmente.Actualmente soy autodidacta estudiando y tomando experiencia en proyectos que se me presente asi hacerme frente a nuevos desafios",
+    "fotoperfil": "../../../assets/imagen/janet.png",
+    "experiencia": [
+        {
+            "id": 1,
+            "logoempresa": "../../../assets/imagen/cerrajeria.jpg",
+            "empresa": "Cerrajería Rosario",
+            "tipo": "Independiente",
+            "puesto": "Diseño",
+            "fechainicio": "01/01/2022",
+            "fechatermino": "30/06/2022"
+        },
+        {
+            "id": 2,
+            "logoempresa": "../../../assets/imagen/tarjeta.png",
+            "empresa": "Ja.net",
+            "tipo": "Independiente",
+            "puesto": "Diseño",
+            "fechainicio": "01/01/2022",
+            "fechatermino": "30/06/2022"
+        }
+    ],
+    "educacion": [
+        {
+            "id": 1,
+            "imagentitulo": "../../../assets/imagen/certif.png",
+            "lugarestudio": "Argentina Programa #Se Programar",
+            "titulo": "Primera etapa Desarrollador Full Stack Jr",
+            "fecha": "11/06/2022"
+        },
+        {
+            "id": 2,
+            "imagentitulo": "../../../assets/imagen/constancia.jpg",
+            "lugarestudio": "I.E.S.T.P Argentina (Lima-Perú)",
+            "titulo": "Tecnico Contable",
+            "fecha": "11/06/2002"
+        }
+    ],
+    "habilidades": [
+        {
+            "id": 1,
+            "nombre": "HTML",
+            "porcentaje": 70,
+            "img": "../../../assets/imagen/html5.png"
+        },
+        {
+            "id": 2,
+            "nombre": "CSS - Bootstrap",
+            "porcentaje": 70,
+            "img1": "../../../assets/imagen/css.png",
+            "img2": "../../../assets/imagen/bootstrap.png"
+        },
+        {
+            "id": 3,
+            "nombre": "Angular - TypeScript",
+            "porcentaje": 40,
+            "img1": "../../../assets/imagen/angular.png",
+            "img2": "../../../assets/imagen/typescript.png"
+        },
+        {
+            "id": 4,
+            "nombre": "MySql",
+            "porcentaje": 30,
+            "img": "../../../assets/imagen/mysql.png"
+        },
+        {
+            "id": 5,
+            "nombre": "NetBeans",
+            "porcentaje": 25,
+            "img": "../../../assets/imagen/netbeans.png"
+        },
+        {
+            "id": 6,
+            "nombre": "Sprint Boot",
+            "porcentaje": 30,
+            "img": "../../../assets/imagen/spring.png"
+        },
+        {
+            "id": 7,
+            "nombre": "Trabajo en Equipo",
+            "porcentaje": 100,
+            "img": "../../../assets/imagen/scolaborativo.png"
+        },
+        {
+            "id": 8,
+            "nombre": "Autodidacta",
+            "porcentaje": 100,
+            "img": "../../../assets/imagen/sautodidac.png"
+        },
+        {
+            "id": 9,
+            "nombre": "Comunicativo",
+            "porcentaje": 100,
+            "img": "../../../assets/imagen/scomunic.png"
+        }
+    ],
+    "proyectos": [
+        {
+            "id": 1,
+            "imagenproyecto": "../../../assets/imagen/carrusel/cerrajeriaR.png",
+            "url": "http://crosario.260mb.org/?i=1",
+            "proyecto": "Cerrajería Rosario",
+            "tema": "Lista de productos",
+            "fecha": "30/10/2022"
+        },
+        {
+            "id": 2,
+            "imagenproyecto": "../../../assets/imagen/carrusel/receta.png",
+            "url": "http://pruebas.260mb.org/?i=1",
+            "proyecto": "Recetario",
+            "tema": "Buscador recetas",
+            "fecha": "30/09/2022"
+        },
+        {
+            "id": 3,
+            "imagenproyecto": "../../../assets/imagen/carrusel/dados.PNG",
+            "url": "http://dados.260mb.org/",
+            "proyecto": "Dado",
+            "tema": "Dado",
+            "fecha": "20/10/2022"
+        },
+        {
+            "id": 4,
+            "imagenproyecto": "../../../assets/imagen/carrusel/portfolio.PNG",
+            "url": "#",
+            "proyecto": "Mi Portafolio",
+            "tema": "Portafolio Web",
+            "fecha": "20/10/2022"
+        }
+    ]
+}

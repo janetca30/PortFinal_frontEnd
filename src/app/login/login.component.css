@@ -1,9 +1,21 @@
+
 .loguearse{
-     height: 62vh;
- }
- .form-label{
-     color: #14ed31;
- }
- .ingreso{
-     color: #14ed31;
- }
+    height: 53vh;
+    
+}
+.form-label, .ingreso{
+    color: black;
+    font-size: 22px;
+}
+a{
+    text-decoration: none;
+    color: #e71063
+}
+#login{
+
+
+    margin: 75px;
+} 
+.ingreso, .form-text{
+    color:#e71063
+}

@@ -1,7 +1,16 @@
 footer{
     background-color: #c51a51;
-    padding-top: 25px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    padding: 3px;
 }
 strong{
     color: black;
+}
+img{
+    width: 75px;
+    height: 50px;
+    
 }
