@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { interceptorProvider } from './service/interceptor.service';
 import { NewExperienciaComponent } from './components/experiencia/new-experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './components/experiencia/edit-experiencia/edit-experiencia.component';
 
 
 
@@ -42,6 +43,7 @@ import { NewExperienciaComponent } from './components/experiencia/new-experienci
     RegistroCompComponent,
     Error404Component,
     NewExperienciaComponent,
+    EditExperienciaComponent,
     
   ],
   imports: [

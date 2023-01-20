@@ -1,14 +1,21 @@
 section{
     background-color: #d3668bfa;
     padding-bottom: 35px;
+    margin-top: -15;
+}
+.titulo{
+    padding-top: 0cm;
+}
+.expe{
+    margin-right: 155px;
 }
 a{
     color: black;
     text-decoration: none;
 }
 h2{
-    margin-top: 120px;
-    margin-left: 100px;
+    
+    margin-left: 500px;
 }
 h4, h5{
     font-size: 19px;
@@ -31,4 +38,21 @@ h4, h5{
     margin-bottom: 5px;
     margin-left: auto;
     box-shadow: 10px 10px 0 #0a0a0a;
+}
+
+.boton{
+    margin-top: 20px;
+    margin-left: 520px;
+    width: 125px;
+    height: 58px;
+    font-size: small;
+}
+
+.update{
+    padding-bottom: 10px;
+
+}
+.delete{
+    margin-left: 55px;
+    margin-top: -50px;
 }

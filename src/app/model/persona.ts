@@ -10,3 +10,4 @@ export class persona {
         this.apellido = apellido;
     }
 }
+
