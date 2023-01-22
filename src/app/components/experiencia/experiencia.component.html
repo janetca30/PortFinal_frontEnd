@@ -1,57 +1,43 @@
 <!--Experiencia-->
 <section class="experiencia" id="experiencia">
     <div class="titulo">
-        <a><h2><b><i>Experiencia</i></b></h2></a>        
-    </div>  
-    <div class="container"*ngFor="let Experiencia of expe">
-        <div class="row">
-            <div class="col-4 expe">
-                <div class="box">
-                    <div class="row">
-                        <div class="col-6" >
-                            <h3>tipo</h3>
-                            <h4>{{Experiencia.nombreE}}</h4>
-                            <h5><i>{{Experiencia.descripcionE}}</i></h5>
-                            <h3><i>Diseño</i></h3>
-                            <div *ngIf="isLogged" class="update">
-                                <button class="btn btn-dark " routerLink="/editexp/{{Experiencia.id}}">
-                                    <i class="bi bi-pen-fill"></i>
-                                </button>
-                            </div>
-                            <div *ngIf="isLogged" class="delete">
-                                <button class="btn btn-dark" (click)="delete(Experiencia.id)">
-                                    <i class="bi bi-trash3-fill"></i>
-                                </button>
-                            </div>
-                            <h5><p></p></h5>
-                            <h5><p></p></h5>
-                        </div>
-                        <div class="col-6">
-                            <img src="../../../assets/imagen/cerrajeria.jpg" alt="cerrajeria" id="cerrajeria">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4 expe">
-                <div class="box">
-                    <div class="row">
-                        <div class="col-6">
-                            <h4><p>Independiente</p></h4>
-                            <h5><p><i>Ja.net</i></p></h5>
-                            <h5><p><i>Diseño</i></p></h5>
-                            <h5><p>Inicio: 2022</p></h5>
-                            <h5><p>Termino: 2022</p></h5>
-                        </div>
-                        <div class="col-6">
-                            <img src="../../../assets/imagen/tarjeta.png" alt="tarjeta" id="tarjeta">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
+        <h2><b><i>Experiencia</i></b></h2>        
     </div>
     <button type="submit" class="btn btn-dark boton" routerLink="/nuevaexp" *ngIf="isLogged">
         Nueva Experiencia
-    </button>
+    </button>  
+    <div class="row" *ngFor="let Experiencia of expe">
+        <div class="col expe">
+            <div class="card">
+                <div class="circle">
+                </div>
+                <div class="row container">
+                    <div class="col-6">
+                        <img [src]=" " class="img-fluid rounded-start" alt="logo" id="logo">
+                    </div>
+                    <div class="col-1">
+                        <div *ngIf="isLogged" class="update">
+                            <button class="btn btn-dark " routerLink="/editexp/{{Experiencia.id}}">
+                                <i class="bi bi-pen-fill"></i>
+                            </button>
+                        </div>
+                        <div *ngIf="isLogged" class="delete">
+                            <button class="btn btn-dark" (click)="delete(Experiencia.id)">
+                                <i class="bi bi-trash3-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="content">
+                            <h4 class="card-title">{{Experiencia.nombreE}}</h4>
+                            <p class="card-text">{{Experiencia.descripcionE}}</p>
+                            <p class="card-text">{{Experiencia.puestoE}}</p>
+                            <p class="card-text">Inicio {{Experiencia.fInicioE}} Termino {{Experiencia.fTerminoE | date:"dd-MM-yyyy"}} </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+

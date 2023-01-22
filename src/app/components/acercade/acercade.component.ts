@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PersonaService } from '../../service/persona.service';
 import { persona } from 'src/app/model/persona';
-
-
+import { TokenService } from '../../service/token.service';
 
 @Component({
   selector: 'app-acercade',
@@ -10,12 +9,22 @@ import { persona } from 'src/app/model/persona';
   styleUrls: ['./acercade.component.css']
 })
 export class AcercadeComponent implements OnInit{
-  persona: persona = new persona("","","");
+  persona: persona = null;
   
-  constructor(public personaService: PersonaService) { }
+  constructor(public personaService: PersonaService, private tokenService: TokenService) { }
+  isLogged = false
 
   ngOnInit(): void {
-    this.personaService.getPersona().subscribe(data => {this.persona = data})   
+    this.cargarPersona();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    }else {
+      this.isLogged = false;
+    }
   }
-
+  cargarPersona(){
+    this.personaService.detail(1).subscribe(data =>
+      {this.persona = data}
+      )
+  }
 }  
