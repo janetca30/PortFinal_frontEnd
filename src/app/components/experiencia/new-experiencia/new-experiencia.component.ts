@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
-import { SExperienciaService } from 'src/app/service/experiencia.service';
-
+import { ExperienciaService } from 'src/app/service/experiencia.service';
 
 @Component({
   selector: 'app-new-experiencia',
@@ -10,21 +9,21 @@ import { SExperienciaService } from 'src/app/service/experiencia.service';
   styleUrls: ['./new-experiencia.component.css']
 })
 export class NewExperienciaComponent implements OnInit {
-  nombreE: string = '';
-  descripcionE: string = '';
-  imgE: string = '';
-  puestoE: string = '';
-  fInicioE: string = '';
-  fTerminoE: string = '';
+  nombreE: string;
+  descripcionE: string;
+  imgE: string;
+  puestoE: string;
+  fechaI: string;
+  fechaT: string;
 
-  constructor(private sExperiencia: SExperienciaService, private router: Router){ }
+  constructor(private experienciaService: ExperienciaService, private router: Router){ }
 
   ngOnInit(): void {
   }
 
   onCreate(): void {
-    const expe = new Experiencia(this.nombreE, this.descripcionE, this.imgE, this.puestoE, this.fInicioE, this.fTerminoE);
-    this.sExperiencia.save(expe).subscribe(
+    const expe = new Experiencia(this.nombreE, this.descripcionE, this.imgE, this.puestoE, this.fechaI, this.fechaT);
+    this.experienciaService.save(expe).subscribe(
       data=>{
         alert("Experiencia añadida");
         this.router.navigate(['']);

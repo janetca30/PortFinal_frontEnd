@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <h2>Nueva Skill</h2>
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre de la Skill</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="porcentaje">Porcentaje de la skill</label>
+                    <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="porcentaje" required>
+                </div>
+                <div class="form-group">
+                    <label for="imgS">Imagen de la skill</label>
+                    <input type="text" class="form-control" id="imgS" name="imgS" [(ngModel)]="imgS" required>
+                </div>
+                <button class="btn btn-dark ">
+                    Agregar Skills
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

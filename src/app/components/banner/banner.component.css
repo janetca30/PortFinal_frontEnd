@@ -1,6 +1,6 @@
 #cerezoblanco{
-    width: 1200px;
-    height: 550px;
+    width: 90%;
+    height: 580px;
     margin-top: 20px;
 
 }
@@ -8,10 +8,17 @@
     display:flex;
     justify-content: center;
     background: black;
+    z-index: 0;
 }
-.lista{
+.menu{
     position: absolute;
     top: 125px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
 }
 a{
     color: #c51a51;
@@ -24,26 +31,69 @@ li.list-group-item.\.flex-fill{
     
 }
 
-.text{
+.presentacion{
     color: #c51a51;
     position:absolute;
-    top: 320px;
-    left: 320px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 300px;
 }
 
 h1, h3{
     background-color: rgba(39, 38, 38, 0);
     
-}   
+}
+
+.btn{
+    background-color: #c51a51;
+    position: absolute;
+    margin-top: 50px;
+    z-index: 3;
+    
+}
 
 /*estilo para celular y tablets*/
-@media (max-width: 575px){
-    .green{
-    background-color: rgba(255, 255, 255, 0);
-    position: absolute;
-    top: 133px;
-    left: 34px;
-    color: #b12e60;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+@media screen and (max-width : 720px){
+    .lista{
+        position: absolute;
+        top: 220px;
+        
+
+    }
+    ul{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    li{
+        width: 35%;
+    }
+
+    .presentacion{
+        top: 490px;
+        margin-left: -150px;
+    }
+}
+
+@media screen and (min-width : 721px ) and (max-width : 935px){
+    .lista{
+        margin-top: 100px;
+        
+    }
+
+    li{
+        width: 100%;
+        margin-left: -180px;
+        
     }
 }

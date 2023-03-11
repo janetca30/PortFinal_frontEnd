@@ -1,0 +1,16 @@
+<div class="container" *ngIf="persona">
+    <div class="row">
+        <h2>Banner</h2>
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="banner">Imagen del Banner</label>
+                    <input type="file" class="form-control" id="banner" name="banner" [(ngModel)]="persona.banner" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
+                </div>
+                <button class="btn btn-dark">
+                    Editar banner
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

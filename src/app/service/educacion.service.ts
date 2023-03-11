@@ -7,29 +7,27 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class EducacionService {
-url = 'http://localhost:8080/educacion/';
+eduURL = 'http://localhost:8080/educacion/';
 
 constructor(private httpClient:HttpClient) { }
 
-  public getAllEducaciones():Observable<Educacion[]>{
-    return this.httpClient.get<Educacion[]>(this.url + 'list');
+  public lista():Observable<Educacion[]>{
+    return this.httpClient.get<Educacion[]>(this.eduURL + 'lista');
   }
 
-  public getEducation(id:number){
-    return this.httpClient.get<Educacion>(this.url + `getOne/${id}`);
+  public detail(id:number): Observable<Educacion>{
+    return this.httpClient.get<Educacion>(this.eduURL + `detail/${id}`);
   }
 
-  public newEducation(educacion:Educacion):Observable<Educacion>{
-    return this.httpClient.post<Educacion>(this.url + 'new', educacion);
+  public save(educacion:Educacion):Observable<any>{
+    return this.httpClient.post<any>(this.eduURL + 'create', educacion);
   }
   
-  public updateEducation(educacion:Educacion):Observable<any>{
-    const urlEducId = this.url + `edit/${educacion.id}`;
-    return this.httpClient.put<any>(urlEducId, educacion);
+  public update(id: number, educacion: Educacion):Observable<any>{
+    return this.httpClient.put<any>(this.eduURL + `update/${id}`, educacion);
   }
   
-  public deleteEducation(id:number):Observable<any>{
-    const urlEducId = this.url + `delete/${id}`;
-    return this.httpClient.delete<any>(urlEducId);
+  public delete(id:number):Observable<any>{
+    return this.httpClient.delete<any>(this.eduURL + `delete/${id}`);
   }
 }

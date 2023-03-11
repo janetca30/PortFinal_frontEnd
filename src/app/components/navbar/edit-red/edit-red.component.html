@@ -1,0 +1,24 @@
+<div class="container" *ngIf="redsocial">
+    <div class="row">
+        <h2>Editar Red Social</h2>
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre de la Red Social</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="redsocial.nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="link">Link de la Red Social</label>
+                    <input type="text" class="form-control" id="link" name="link" [(ngModel)]="redsocial.link" required>
+                </div>
+                <div class="form-group">
+                    <label for="icono">Icono de la Red Social</label>
+                    <input type="text" class="form-control" id="icono" name="icono" [(ngModel)]="redsocial.icono" required>
+                </div>
+                <button class="btn btn-dark">
+                    Actualizar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

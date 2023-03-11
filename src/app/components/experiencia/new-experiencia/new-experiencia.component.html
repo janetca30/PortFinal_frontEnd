@@ -1,5 +1,6 @@
 <div class="container">
     <div class="row">
+        <h2>Nueva Experiencia</h2>
         <div>
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="form-group">
@@ -19,12 +20,12 @@
                     <input type="text" class="form-control" id="imgE" name="imgE" [(ngModel)]="imgE" required>
                 </div>
                 <div class="form-group">
-                    <label for="fInicioE">Inicio</label>
-                    <input type="date" class="form-control" id="fInicioE" name="fInicioE" [(ngModel)]="fInicioE" required>
+                    <label for="fechaI">Inicio</label>
+                    <input type="date" class="form-control" id="fechaI" name="fechaI" [(ngModel)]="fechaI" required>
                 </div>
                 <div class="form-group">
-                    <label for="fTerminoE">Termino</label>
-                    <input type="date" class="form-control" id="fTerminoE" name="fTerminoE" [(ngModel)]="fTerminoE" required>
+                    <label for="fechaT">Termino</label>
+                    <input type="date" class="form-control" id="fechaT" name="fechaT" [(ngModel)]="fechaT" required>
                 </div>
                 <button class="btn btn-dark ">
                     Agregar experiencia

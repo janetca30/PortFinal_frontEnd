@@ -7,28 +7,27 @@ import { Proyecto } from '../model/proyecto';
   providedIn: 'root'
 })
 export class ProyectoService {
-  url = 'http://localhost:8080/proyectos/';
+  proyURL = 'http://localhost:8080/proy/';
 
   constructor(private httpClient: HttpClient) { }
 
-  public getAllProjects():Observable<Proyecto[]>{
-  return this.httpClient.get<Proyecto[]>(this.url + 'list');
+  public lista():Observable<Proyecto[]>{
+    return this.httpClient.get<Proyecto[]>(this.proyURL + 'lista');
   }
 
-  public getProject(id:number){
-    return this.httpClient.get<Proyecto>(this.url + `getOne/${id}`);
+  public detail(id:number): Observable<Proyecto>{
+    return this.httpClient.get<Proyecto>(this.proyURL + `detail/${id}`);
   }
 
-  public newProject(proyecto: Proyecto):Observable<Proyecto>{
-    return this.httpClient.post<Proyecto>(this.url + 'new', proyecto);
+  public save(proyecto:Proyecto):Observable<any>{
+    return this.httpClient.post<any>(this.proyURL + 'create', proyecto);
   }
-
-  public updateProject(proyecto: Proyecto):Observable<any>{
-  const urlProyectoId = this.url + `edit/${proyecto.id}`;
-    return this.httpClient.put<any>(urlProyectoId, proyecto);
+  
+  public update(id: number, proyecto: Proyecto):Observable<any>{
+    return this.httpClient.put<any>(this.proyURL + `update/${id}`, proyecto);
   }
-
-  public deleteProject(id:number):Observable<any>{
-    return this.httpClient.delete<any>(this.url + `delete/${id}`);
+  
+  public delete(id:number):Observable<any>{
+    return this.httpClient.delete<any>(this.proyURL + `delete/${id}`);
   }
 }

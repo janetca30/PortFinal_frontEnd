@@ -1,22 +1,28 @@
 <!--banner-->
-<div class="imgbanner">
-    <img src="../../../assets/imagen/cerezoblanco.jpg" id="cerezoblanco">
-    <div class="col lista">
-        <ul class="list-group list-group-horizontal">
-            <li class="list-group-item .flex-fill"><a href="#acerca" class="active">Acerca de mi</a></li>
-            <li class="list-group-item .flex-fill"><a href="#experiencia">Experiencia</a></li>                    
-            <li class="list-group-item .flex-fill"><a href="#educacion">Educación</a></li>                    
-            <li class="list-group-item .flex-fill"><a href="#skills">Habilidades</a></li>
-            <li class="list-group-item .flex-fill"><a href="#proyectos">Proyectos</a></li>
-        </ul>
-    </div>
-    <!--Presentacion-->
-    <div class="col text p-5">
-        <h3></h3>
-        <h1><strong><i>My Portfolio Web</i></strong></h1>
-        <h3></h3>
+<div class="container-fluid">
+    <button class="btn btn-dark " routerLink="/editbanner/1" *ngIf="isLogged">
+        <i class="bi bi-pen-fill"></i>
+    </button>
+    <div class="row">
+        <div class="imgbanner">
+            <img src="{{persona.banner}}" id="cerezoblanco">
+        </div>    
+        <nav class="menu">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item .flex-fill"><a href="#acerca" class="active">Acerca de mi</a></li>
+                <li class="list-group-item .flex-fill"><a href="#experiencia">Experiencia</a></li>                    
+                <li class="list-group-item .flex-fill"><a href="#educacion">Educación</a></li>                    
+                <li class="list-group-item .flex-fill"><a href="#skills">Habilidades</a></li>
+                <li class="list-group-item .flex-fill"><a href="#proyectos">Proyectos</a></li>
+            </ul>
+        </nav> 
+        <!--Presentacion-->
+        <div class="presentacion">
+            <h2> My Portfolio Web </h2>
+        </div>
     </div>
 </div>
+
 
 
 

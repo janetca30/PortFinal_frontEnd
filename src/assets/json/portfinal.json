@@ -1,7 +1,7 @@
 {
     "nombre": "Janet",
     "apellido": "Calderon Acuña de Denis",
-    "puesto": "Desarrollador Full Stack Jr.",
+    "puesto": "Full Stack Developer Jr.",
     "redes": [
         {
             "id": 1,
@@ -28,129 +28,121 @@
     "experiencia": [
         {
             "id": 1,
-            "logoempresa": "../../../assets/imagen/cerrajeria.jpg",
-            "empresa": "Cerrajería Rosario",
-            "tipo": "Independiente",
-            "puesto": "Diseño",
-            "fechainicio": "01/01/2022",
-            "fechatermino": "30/06/2022"
+            "imgE": "../../../assets/imagen/cerrajeria.jpg",
+            "nombreE": "Cerrajería Rosario",
+            "descripcionE": "Creacion de lista de artículos de cerrajería en general",
+            "puestoE": "Diseño",
+            "fechaI": "2022/10/05",
+            "fechaT": "2022/10/30"
         },
         {
             "id": 2,
-            "logoempresa": "../../../assets/imagen/tarjeta.png",
-            "empresa": "Ja.net",
-            "tipo": "Independiente",
-            "puesto": "Diseño",
-            "fechainicio": "01/01/2022",
-            "fechatermino": "30/06/2022"
+            "imgE": "../../../assets/imagen/tarjeta.png",
+            "nombreE": "Ja.net",
+            "descripcionE": "Creacion de una tarjeta de presentacion con logo",
+            "puestoE": "Diseño",
+            "fechaI": "2022/09/13",
+            "fechaT": "2022/09/20"
         }
     ],
     "educacion": [
         {
             "id": 1,
-            "imagentitulo": "../../../assets/imagen/certif.png",
-            "lugarestudio": "Argentina Programa #Se Programar",
-            "titulo": "Primera etapa Desarrollador Full Stack Jr",
-            "fecha": "11/06/2022"
+            "imgE": "../../../assets/imagen/certif.png",
+            "descripcionE": "Argentina Programa #Se Programar",
+            "tituloE": "Primera etapa Desarrollador Full Stack Jr",
+            "anio": "2022"
         },
         {
             "id": 2,
-            "imagentitulo": "../../../assets/imagen/constancia.jpg",
-            "lugarestudio": "I.E.S.T.P Argentina (Lima-Perú)",
-            "titulo": "Tecnico Contable",
-            "fecha": "11/06/2002"
+            "imgE": "../../../assets/imagen/constancia.jpg",
+            "descripcionE": "I.E.S.T.P Argentina (Lima-Perú)",
+            "tituloE": "Tecnico Contable",
+            "anio": "2002"
         }
     ],
-    "habilidades": [
+    "Skills": [
         {
             "id": 1,
             "nombre": "HTML",
             "porcentaje": 70,
-            "img": "../../../assets/imagen/html5.png"
+            "imgS": "../../../assets/imagen/html5.png"
         },
         {
             "id": 2,
-            "nombre": "CSS - Bootstrap",
+            "nombre": "CSS",
             "porcentaje": 70,
-            "img1": "../../../assets/imagen/css.png",
-            "img2": "../../../assets/imagen/bootstrap.png"
+            "imgS": "../../../assets/imagen/css.png"
         },
         {
             "id": 3,
-            "nombre": "Angular - TypeScript",
+            "nombre": "Angular",
             "porcentaje": 40,
-            "img1": "../../../assets/imagen/angular.png",
-            "img2": "../../../assets/imagen/typescript.png"
+            "imgS": "../../../assets/imagen/angular.png"
         },
         {
             "id": 4,
             "nombre": "MySql",
             "porcentaje": 30,
-            "img": "../../../assets/imagen/mysql.png"
+            "imgS": "../../../assets/imagen/mysql.png"
         },
         {
             "id": 5,
-            "nombre": "NetBeans",
-            "porcentaje": 25,
-            "img": "../../../assets/imagen/netbeans.png"
+            "nombre": "Sprint Boot",
+            "porcentaje": 30,
+            "imgS": "../../../assets/imagen/spring.png"
         },
         {
             "id": 6,
-            "nombre": "Sprint Boot",
-            "porcentaje": 30,
-            "img": "../../../assets/imagen/spring.png"
+            "nombre": "Trabajo en Equipo",
+            "porcentaje": 100,
+            "imgS": "../../../assets/imagen/scolaborativo.png"
         },
         {
             "id": 7,
-            "nombre": "Trabajo en Equipo",
+            "nombre": "Autodidacta",
             "porcentaje": 100,
-            "img": "../../../assets/imagen/scolaborativo.png"
+            "imgS": "../../../assets/imagen/sautodidac.png"
         },
         {
             "id": 8,
-            "nombre": "Autodidacta",
+            "nombre": "Comunicativa",
             "porcentaje": 100,
-            "img": "../../../assets/imagen/sautodidac.png"
-        },
-        {
-            "id": 9,
-            "nombre": "Comunicativo",
-            "porcentaje": 100,
-            "img": "../../../assets/imagen/scomunic.png"
+            "imgS": "../../../assets/imagen/scomunic.png"
         }
     ],
     "proyectos": [
         {
             "id": 1,
-            "imagenproyecto": "../../../assets/imagen/carrusel/cerrajeriaR.png",
-            "url": "http://crosario.260mb.org/?i=1",
-            "proyecto": "Cerrajería Rosario",
-            "tema": "Lista de productos",
-            "fecha": "30/10/2022"
+            "imgP": "../../../assets/imagen/carrusel/cerrajeriaR.png",
+            "link": "http://crosario.260mb.org/?i=1",
+            "nombreP": "Cerrajería Rosario",
+            "descripcionP": "Lista de productos",
+            "fechaP": "30/10/2022"
         },
         {
             "id": 2,
-            "imagenproyecto": "../../../assets/imagen/carrusel/receta.png",
-            "url": "http://pruebas.260mb.org/?i=1",
-            "proyecto": "Recetario",
-            "tema": "Buscador recetas",
-            "fecha": "30/09/2022"
+            "imgP": "../../../assets/imagen/carrusel/receta.png",
+            "link": "http://pruebas.260mb.org/?i=1",
+            "nombreP": "Recetario",
+            "descripcionP": "Buscador recetas",
+            "fechaP": "30/09/2022"
         },
         {
             "id": 3,
-            "imagenproyecto": "../../../assets/imagen/carrusel/dados.PNG",
-            "url": "http://dados.260mb.org/",
-            "proyecto": "Dado",
-            "tema": "Dado",
-            "fecha": "20/10/2022"
+            "imgP": "../../../assets/imagen/carrusel/dados.PNG",
+            "link": "http://dados.260mb.org/",
+            "nombreP": "Dado",
+            "descripcionP": "Dado",
+            "fechaP": "20/10/2022"
         },
         {
             "id": 4,
-            "imagenproyecto": "../../../assets/imagen/carrusel/portfolio.PNG",
-            "url": "#",
-            "proyecto": "Mi Portafolio",
-            "tema": "Portafolio Web",
-            "fecha": "20/10/2022"
+            "imgP": "../../../assets/imagen/carrusel/portfolio.PNG",
+            "link": "#",
+            "nombreP": "Mi Portafolio",
+            "descripcionP": "Portafolio Web",
+            "fechaP": "20/10/2022"
         }
     ]
 }

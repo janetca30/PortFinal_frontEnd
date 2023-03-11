@@ -11,8 +11,92 @@
 	-moz-filter: (1)
 	
 }
-.redes img{
-	height: 40px;
+
+.redsocial{
+	display: flex;
+	flex-direction: row;
+	flex-wrap:wrap;
+	object-fit: contain;
+	justify-content: center;
+	align-items: center;
+	
+}
+.icono{
 	width: 40px;
-	background-image: none;
+	height: 40px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	object-fit: contain;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.red{
+	display: flex;
+	flex-direction: row;
+	
+}
+.redlist{
+	display: flex;
+	object-fit: contain;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.botones{
+	display: flex;
+	object-fit: contain;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.update {
+	margin-left: 0px;
+	margin-top: 0px;
+			
+}
+.delete{
+	margin-left: 0px;
+	margin-top: 0px;
+	
+}
+.tacho, .lapiz{
+	color: rgb(254, 255, 255);
+	background-color: black;
+	
+}
+
+button{
+	background-color: black;
+}
+
+button:hover{
+	background-color: #353a36;
+}
+
+#bloqueo, #desbloqueo{
+	width: 35px;
+}	
+.pink{	
+	background-color: #c51a51;
+}
+
+@media screen and (max-width : 575px) {
+	#ArgPr{
+		height: 80%;
+		width: 70%;
+		margin-left: 15px;
+		
+	}
+	.red{
+		width: 35px;
+		margin-right: -5%;
+		padding: 0%;
+		
+	}
+
+
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Experiencia } from '../../../model/experiencia';
-import { SExperienciaService } from '../../../service/experiencia.service';
+import { ExperienciaService } from '../../../service/experiencia.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -11,11 +11,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class EditExperienciaComponent implements OnInit{
   expLab : Experiencia = null;
 
-  constructor(private sExperiencia: SExperienciaService, private activatedRouter: ActivatedRoute, private router: Router){}
+  constructor(private experienciaService: ExperienciaService, private activatedRouter: ActivatedRoute, private router: Router){}
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.sExperiencia.detail(id).subscribe(
+    this.experienciaService.detail(id).subscribe(
       data =>{
         this.expLab = data;
       }, err =>{
@@ -28,7 +28,7 @@ export class EditExperienciaComponent implements OnInit{
 
   onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.sExperiencia.update(id, this.expLab).subscribe(
+    this.experienciaService.update(id, this.expLab).subscribe(
       data => {
         this.router.navigate(['']);
       },err =>{
@@ -38,6 +38,5 @@ export class EditExperienciaComponent implements OnInit{
     )
     
   }
- 
   
 }

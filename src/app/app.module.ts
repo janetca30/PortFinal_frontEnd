@@ -13,7 +13,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { FondoComponent } from './components/fondo/fondo.component';
 import { LoginComponent } from './login/login.component';
-import { RegistroCompComponent } from './registro-comp/registro-comp.component';
 import { Error404Component } from './error404/error404.component';
 import { PersonaService } from '../app/service/persona.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -21,10 +20,17 @@ import { FormsModule } from '@angular/forms';
 import { interceptorProvider } from './service/interceptor.service';
 import { NewExperienciaComponent } from './components/experiencia/new-experiencia/new-experiencia.component';
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia/edit-experiencia.component';
-
-
-
-
+import { EditAcercadeComponent } from './components/acercade/edit-acercade/edit-acercade.component';
+import { EditEducacionComponent } from './components/educacion/edit-educacion/edit-educacion.component';
+import { NewEducacionComponent } from './components/educacion/new-educacion/new-educacion.component';
+import { EditSkillsComponent } from './components/skills/edit-skills/edit-skills.component';
+import { NewSkillsComponent } from './components/skills/new-skills/new-skills.component';
+import { EditProyectoComponent } from './components/proyectos/edit-proyecto/edit-proyecto.component';
+import { NewProyectoComponent } from './components/proyectos/new-proyecto/new-proyecto.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { NewRedComponent } from './components/navbar/new-red/new-red.component';
+import { EditRedComponent } from './components/navbar/edit-red/edit-red.component';
+import { EditBannerComponent } from './components/banner/edit-banner/edit-banner.component';
 
 @NgModule({
   declarations: [
@@ -40,18 +46,26 @@ import { EditExperienciaComponent } from './components/experiencia/edit-experien
     PortfolioComponent,
     FondoComponent,
     LoginComponent,
-    RegistroCompComponent,
     Error404Component,
     NewExperienciaComponent,
+    NewEducacionComponent,
     EditExperienciaComponent,
-    
+    EditAcercadeComponent,
+    EditEducacionComponent,
+    EditSkillsComponent,
+    NewSkillsComponent,
+    EditProyectoComponent,
+    NewProyectoComponent,
+    NewRedComponent,
+    EditRedComponent,
+    EditBannerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
-    
+    FormsModule,
+    NgCircleProgressModule.forRoot({})
   ],
   providers: [PersonaService, 
   interceptorProvider],

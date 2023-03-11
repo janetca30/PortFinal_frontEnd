@@ -4,17 +4,17 @@ export class Experiencia {
     descripcionE: string;
     imgE: string;
     puestoE: string;
-    fInicioE: string;
-    fTerminoE: string;
+    fechaI: string;
+    fechaT: string;
     
 
-    constructor(nombreE:string, descripcionE:string, imgE:string, puestoE:string, fInicioE:string, fTerminoE:string) {
+    constructor(nombreE:string, descripcionE:string, imgE:string, puestoE:string, fechaI:string, fechaT:string) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
         this.imgE = imgE;
         this.puestoE = puestoE;
-        this.fInicioE = fInicioE;
-        this.fTerminoE = fTerminoE;
+        this.fechaI = fechaI;
+        this.fechaT = fechaT;
         
     }
 }

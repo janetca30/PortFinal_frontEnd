@@ -6,7 +6,7 @@ import { Experiencia } from '../model/experiencia';
 @Injectable({
   providedIn: 'root'
 })
-export class SExperienciaService {
+export class ExperienciaService {
   expURL= 'http://localhost:8080/explab/';
   
   constructor(private httpClient:HttpClient) { }

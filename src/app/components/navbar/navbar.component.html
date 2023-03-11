@@ -2,41 +2,47 @@
     <section id="navbar">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand" href="">
-                    <img src="../../../assets/imagen/ArgPr.png" id="ArgPr">
-                </a>
-                    <ul class="list-group list-group-horizontal">
-                        <!--Redes Sociales-->
-                        <li class="list-group-item redes">
-                            <a href="https://api.whatsapp.com/send?phone=3415086762" target="_blank">
-                                <img src="../../../assets/imagen/redes/bwhatsapp.png">
-                            </a>
-                        </li>
-                        <li class="list-group-item redes">
-                            <a href="https://github.com/janetca30" target="_blank">
-                                <img src="../../../assets/imagen/redes/bgithub.png">
-                            </a>
-                        </li>
-                        <li class="list-group-item redes">
-                            <a href="https://www.linkedin.com/in/janet-calderon-559ab6240/" target="_blank" >
-                                <img src="../../../assets/imagen/redes/blinkedin.png">
-                            </a>
-                        </li>                        
-                    </ul>                    
+                <div>
+                    <a class="navbar-brand" href="">
+                        <img src="https://i.imgur.com/Oi75AQU.png" id="ArgPr">
+                    </a>
+                </div>
+                <button type="submit" class="btn btn-dark boton" routerLink="/nuevared" *ngIf="isLogged">Nueva Red Social
+                </button>  
+            <!--Redes Sociales-->
+            <div class="row">
+                <div class="redsocial">
+                    <div class="red" *ngFor="let Redes of redsocial">
+                        <ul class="redlist">
+                            <a href={{Redes.link}} target="_blank">
+                            <img class="icono" src={{Redes.icono}}></a>
+                        </ul>
+                        <div class="botones">
+                            <div *ngIf="isLogged" class="update">
+                                <button class="btn btn-dark " routerLink="/editred/{{Redes.id}}">
+                                    <i class="bi bi-pen-fill lapiz"></i>
+                                </button>
+                            </div>
+                            <div *ngIf="isLogged" class="delete">
+                                <button class="btn btn-dark " (click)="delete(Redes.id)">
+                                    <i class="bi bi-trash3-fill tacho"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="!isLogged">        
+                        <button class="btn pink" (click)="login()">
+                            <img src="https://i.imgur.com/eAcId4s.png" id="bloqueo">
+                        </button>
+                    </div>
+                    <div *ngIf="isLogged" class="blogin" (click)="onLogout()">                                
+                        <button class="btn pink">
+                            <img src="https://i.imgur.com/hBnD268.png" id="desbloqueo">
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="blogin" (click)="toggleSidebar()">            
-                <ul class="list-group list-group-horizontal" >
-                    <li class="list-group-item redes " [ngClass]="{}">
-                        <a href="/login">
-                            <img src="../../../assets/imagen/add-lock.png" id="bloqueo" routerLink="/login">                                
-                        </a>
-                    </li>
-                    <li class="list-group-item redes">
-                        <a href="">
-                            <img src="../../../assets/imagen/desbloqueo.png" id="desbloqueo">
-                        </a>
-                    </li>  
-                </ul>                 
-            </div>
-        </nav>
-    </section>
+                            
+            
+        
+

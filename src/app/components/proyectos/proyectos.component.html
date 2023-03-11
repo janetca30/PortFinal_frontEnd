@@ -1,44 +1,36 @@
 <!--Proyectos-->
-<section>
-    <div class="container proyectos" id="proyectos">
-        <div class="container text-center">
-            <a href="#"><h2><b><i>Proyectos</i></b></h2></a> 
-            <div class="row">
-                <div class="slider-contenedor"> 
-                    <ul>
-                        <li>
-                            <img src="../../../assets/imagen/carrusel/cerrajeriaR.png" alt="">
-                                <p><h5>
-                                    <a href="http://crosario.260mb.org/?i=1" target="_blank">Cerrajería Rosario</a>
-                                    </h5>
-                                    <h6>Lista de Productos - 2022
-                                    </h6>
-                        </li>
-                        <li>
-                            <img src="../../../assets/imagen/carrusel/receta.png" alt="">
-                                <p><h5>
-                                    <a href="http://pruebas.260mb.org/?i=1" target="_blank">Recetario</a>
-                                    </h5>
-                                    <h6>Buscador recetas - 2022
-                                    </h6> 
-                        </li>
-                        <li>
-                            <img src="../../../assets/imagen/carrusel/dados.PNG" alt="">  
-                                <p><h5> 
-                                    <a href="http://dados.260mb.org/" target="_blank">Dado</a>
-                                    </h5>
-                                    <h6>Dado - 2022
-                                    </h6>
-                        </li>
-                        <li>
-                            <img src="../../../assets/imagen/carrusel/portfolio.PNG" alt="">
-                                <p><h5> 
-                                    <a href="">Mi Portafolio</a>
-                                    </h5>
-                                    <h6>Portafolio Web - 2022
-                                    </h6>
-                        </li>
-                    </ul>
+<section class="proyectos" id="proyectos">
+    <div class="container">
+        <div class="row">
+            <div class="col mt-3">
+                <h2><b><i>Proyectos</i></b></h2>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-dark boton" routerLink="/nuevoproy" *ngIf="isLogged">Nuevo Proyecto
+    </button>
+    <div class="container">
+        <div class="row proyect">
+            <div class="proy" *ngFor="let Proyecto of proyecto">
+                <div class="card mb-3">
+                    <img src={{Proyecto.imgP}} class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-title"><a [href]=Proyecto.linkP target="_blank"> {{Proyecto.nombreP}} </a></p>
+                        <p class="card-text"> {{Proyecto.descripcionP}}</p>
+                        <p class="card-text"> {{Proyecto.fechaP | date: "dd-MM-yyyy"}}</p>
+                        <div class="edicion">
+                            <div *ngIf="isLogged" class="update">
+                                <button class="btn btn-dark " routerLink="/editproy/{{Proyecto.id}}">
+                                    <i class="bi bi-pen-fill"></i>
+                                </button>
+                            </div>
+                            <div *ngIf="isLogged" class="delete">
+                                <button class="btn btn-dark" (click)="delete(Proyecto.id)">
+                                    <i class="bi bi-trash3-fill"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

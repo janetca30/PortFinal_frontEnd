@@ -1,29 +1,36 @@
 <!--Educacion-->
-<section class="Educ" id="educacion">
-    <div class="container text-center">
+<section class="educacion" id="educacion">
+    <div class="container">
         <div class="row">
-            <div class="col-lg mt-3">
-                <a href="#"><h2><b><i>Educación</i></b></h2></a>
-                <div class="row">
-                    <div class="col-7 mt-5">
-                        <h4><p>Argentina Programa #Se Programar</p></h4>
-                        <h5><p><i>Primera etapa Desarrollador Full Stack Jr</i></p></h5>
-                        <h5><p>2022</p></h5>
-                    </div>
-                    <div class="col-5 mt-1">   
-                        <img src="../../../assets/imagen/certif.png" alt="certif">
-                    </div>
-                    <div class="col-7 mt-5">
-                        <h4><p>I.E.S.T.P Argentina (Lima-Perú)</p></h4>
-                        <h5><p><i>Tecnico Contable</i></p></h5>
-                        <h5><p>2002</p></h5>
-                    </div>
-                    <div class="col-5 mt-1">   
-                        <img src="../../../assets/imagen/constancia.jpg" alt="constancia">
-                    </div>
+            <div class="col mt-3">
+                <h2><b><i>Educación</i></b></h2>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-dark boton" routerLink="/nuevaedu" *ngIf="isLogged">Agregar Educacion
+    </button>
+    <div class="container">
+        <div class="row edu" *ngFor="let Educacion of educacion">
+            <div class="textedu col-6 mt-5">
+                <p class="peduc">{{Educacion.tituloE}}</p>
+                <p class="peduc"><i>{{Educacion.descripcionE}}</i></p>
+                <p class="peduc">{{Educacion.anioE | date:"yyyy"}}</p>
+            </div>
+            <div class="col-1 edicion">
+                <div *ngIf="isLogged" class="update">
+                    <button class="btn btn-dark " routerLink="/editedu/{{Educacion.id}}">
+                        <i class="bi bi-pen-fill"></i>
+                    </button>
                 </div>
-            </div>            
+                <div *ngIf="isLogged" class="delete">
+                    <button class="btn btn-dark" (click)="delete(Educacion.id)">
+                        <i class="bi bi-trash3-fill"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col-5" id="imagen">
+                <img src={{Educacion.imgE}} alt="certif" id="imagen">
+            </div>
         </div>
     </div>
 </section>
-

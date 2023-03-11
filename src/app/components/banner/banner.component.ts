@@ -1,22 +1,36 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { persona } from 'src/app/model/persona';
+import { PersonaService } from 'src/app/service/persona.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.css']
 })
-export class BannerComponent {
-  @Input() personaData?: persona;
+export class BannerComponent implements OnInit{
+  isLogged = false;
+  persona: persona = null;
 
-  showTitle(){
-    const el = document.querySelector('#heroText');
-    el?.classList.remove('hidetext', 'opacity-0');
+
+  constructor(public personaService: PersonaService, private tokenService: TokenService) { }
+  
+  ngOnInit(): void{
+
+    this.cargarPersona();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    }else {
+      this.isLogged = false;
+    }
+    
+  }
+  
+  cargarPersona(){
+    this.personaService.detail(1).subscribe(data =>
+      {this.persona = data}
+      );
+  }  
+    
   }
 
-  ngOnInit(){
-    setTimeout(this.showTitle, 200)
-  }
-
-
-}

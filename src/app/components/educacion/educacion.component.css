@@ -1,12 +1,152 @@
 section{
     background-color: #b67892;
 }
+h2{
+    color: black;
+    text-decoration: none;
+	display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
 a{
     color: black;
     text-decoration: none;
 }
+.edu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.textedu{
+    justify-content: flex-start;
+    width: 380px;
+}
+.peduc{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
 img{
-    height: 150px;
-    width: 220px;
-    margin: 20px;
+    height: 200px;
+    width: 300px;
+    padding: 15px;
+}
+
+.boton{
+    margin-left: 100px;
+	width: 85%;
+    height: 40px;
+    font-size: medium;
+    text-align: center;
+    background-color:#212529;
+    display: block;
+	position: relative;
+}
+
+.btn{
+    display: block;
+	position: relative;
+}
+
+.edicion{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+}
+.delete{
+    margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+    h2{
+        text-align: center;
+        margin-left : -5%;
+    }
+    .edu{
+        width: 100%;
+        height: 400%;
+        position: relative;
+    }
+    .texto{
+        width: 150px;
+        height: 50%;
+    }
+    .edicion{
+        padding-top: 2px;
+
+    }
+    #imagen{
+        margin-left: 25%;
+        
+    }
+
+}
+@media (max-width: 500px) {
+	h2{
+        margin-left: 5%;
+    }
+    .boton{
+		width: 70%;
+        padding-right: 15px;
+        margin-left: 12%;
+
+	}
+    .edu{
+        width: 150px;
+        height: 100%;
+        right: 0;
+    }
+    .texto{
+        margin-left: -97px;
+        position: relative;
+    }
+    .edicion{
+        margin-left: -450px;
+        margin-top: -255px;
+    }
+    #imagen{
+        margin-left: -1px;
+        padding-left: 25px;
+        margin-top: 65px;
+    }
+}
+
+@media (max-width: 767px)
+{
+	h2{
+        margin-left: 5%;
+    }
+    .boton{
+		width: 70%;
+        padding-right: 15px;
+        margin-left: 12%;
+
+	}
+    .edu{
+        width: 150px;
+        height: 100%;
+        right: 0;
+    }
+    .texto{
+        margin-left: -97px;
+        position: relative;
+    }
+    .edicion{
+        margin-left: -450px;
+        margin-top: -155px;
+    }
+    #imagen{
+        margin-left: -1px;
+        padding-left: 95px;
+        margin-top: 55px;
+    }
 }

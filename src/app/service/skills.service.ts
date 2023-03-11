@@ -6,30 +6,28 @@ import { Skills } from '../model/skills';
 @Injectable({
   providedIn: 'root'
 })
-export class skillsService {
-  url = 'http://localhost:8080/skills/';
+export class SkillsService {
+  skiURL = 'http://localhost:8080/skill/';
 
   constructor(private httpClient: HttpClient) { }
 
-  public getAllHS(): Observable<Skills[]> {
-    return this.httpClient.get<Skills[]>(this.url + 'list');
+  public lista():Observable<Skills[]>{
+    return this.httpClient.get<Skills[]>(this.skiURL + 'lista');
   }
 
-  public getHardSkill(id:number) {
-    return this.httpClient.get<Skills>(this.url + `getOne/${id}`);
+  public detail(id:number): Observable<Skills>{
+    return this.httpClient.get<Skills>(this.skiURL + `detail/${id}`);
   }
 
-  public newSkills(skills:Skills):Observable<Skills>{
-    return this.httpClient.post<Skills>(this.url + 'new', skills);
+  public save(skills:Skills):Observable<any>{
+    return this.httpClient.post<any>(this.skiURL + 'create', skills);
   }
-
-  public updateSkills(skills: Skills):Observable<any>{
-    const urlSkillsId = this.url + `edit/${skills.id}`;
-    return this.httpClient.put<any>(urlSkillsId, skills);
+  
+  public update(id: number, skills: Skills):Observable<any>{
+    return this.httpClient.put<any>(this.skiURL + `update/${id}`, skills);
   }
-
-  public deleteSkills(id:number):Observable<any>{
-    const urlSkillsId = this.url + `delete/${id}`;
-    return this.httpClient.delete<any>(urlSkillsId);
+  
+  public delete(id:number):Observable<any>{
+    return this.httpClient.delete<any>(this.skiURL + `delete/${id}`);
   }
 }

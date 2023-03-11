@@ -14,8 +14,43 @@ a{
     text-decoration: none;
 }
 #nombre{
+    margin-top: 5px;
     color: black;
     font-size: 40px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin-top: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.boton{
+    margin-left: 100px;
+	width: 85%;
+    height: 40px;
+    font-size: medium;
+    text-align: center;
+    background-color:#212529;
+}
+.boton:hover{
+    background-color: #424649;
+}
+@media screen and (max-width : 720px){
+    .boton{
+        margin-left: 49px;
+    }
+}
+
+@media screen and (min-width : 721px ) and (max-width : 1240px){
+    .boton{
+        margin-left: 63px;
+    }
+}
+@media (max-width: 500px){
+	.boton{
+		width: 70%;
+        padding-right: 15px;
+        margin-left: 12%;
+	}
+	a{
+        margin-left: 25%;
+    }
+	
 }

@@ -1,14 +1,17 @@
 *{
     background-color: #b32a6a00;
+    
 }
 .cerezo{
-    position:static;
-    justify-content: center;
+    display: block ;
+    float: left;
+    
 }
 svg{
     width: 956px;
     height: 200%;
     opacity: 57%;
+
 }
 #flor32 , #flor15 ,#flor30 {
     transform: translate( 10%, 156%);
