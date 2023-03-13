@@ -31,6 +31,12 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { NewRedComponent } from './components/navbar/new-red/new-red.component';
 import { EditRedComponent } from './components/navbar/edit-red/edit-red.component';
 import { EditBannerComponent } from './components/banner/edit-banner/edit-banner.component';
+import {AngularFireModule}  from '@angular/fire/compat';
+import {AngularFireAuthModule} from '@angular/fire/compat/auth';
+import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
+import { environment } from '../environments/environment';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -65,7 +71,12 @@ import { EditBannerComponent } from './components/banner/edit-banner/edit-banner
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgCircleProgressModule.forRoot({})
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    NgCircleProgressModule.forRoot({}),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [PersonaService, 
   interceptorProvider],

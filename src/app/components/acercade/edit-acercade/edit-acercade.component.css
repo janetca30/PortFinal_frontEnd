@@ -1,12 +1,12 @@
 *{
     color: deeppink;
-    width: 850px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
 container{
     justify-content: center;
+    width: 850px;
 }
 form{
     display: flex;
@@ -25,4 +25,7 @@ button{
     margin: 20px;
     width: 500px;
     align-items: center;
+}
+.imagen{
+    width: 50px;
 }

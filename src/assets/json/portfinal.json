@@ -1,7 +1,15 @@
 {
-    "nombre": "Janet",
-    "apellido": "Calderon Acuña de Denis",
-    "puesto": "Full Stack Developer Jr.",
+    "persona": [
+        {
+            "id":"admin",
+            "nombre": "Janet",
+            "apellido": "Calderon Acuña de Denis",
+            "puesto": "Full Stack Developer Jr.",
+            "banner": "../../../assets/imagen/cerezoblanco.jpg",
+            "acerca de mi": "Estudie Contabilidad, trabaje como Administrativa por muchos años hasta llegue a ser Directora de una Empresa; mi pasión por la tecnología me lleva ahora hacia un nuevo desafío. Soy una persona responsable, multifacética, creativa, emprendedora con muchas ganas de seguir desarrollandome personal y profesionalmente.Actualmente soy autodidacta estudiando y tomando experiencia en proyectos que se me presente asi hacerme frente a nuevos desafios",
+            "fotoperfil": "../../../assets/imagen/janet.png"
+        }
+    ],
     "redes": [
         {
             "id": 1,
@@ -22,9 +30,7 @@
             "nombre": "linkedin"
         }
     ],
-    "banner": "../../../assets/imagen/cerezoblanco.jpg",
-    "acerca de mi": "Estudie Contabilidad, trabaje como Administrativa por muchos años hasta llegue a ser Directora de una Empresa; mi pasión por la tecnología me lleva ahora hacia un nuevo desafío. Soy una persona responsable, multifacética, creativa, emprendedora con muchas ganas de seguir desarrollandome personal y profesionalmente.Actualmente soy autodidacta estudiando y tomando experiencia en proyectos que se me presente asi hacerme frente a nuevos desafios",
-    "fotoperfil": "../../../assets/imagen/janet.png",
+    
     "experiencia": [
         {
             "id": 1,
@@ -143,6 +149,13 @@
             "nombreP": "Mi Portafolio",
             "descripcionP": "Portafolio Web",
             "fechaP": "20/10/2022"
+        }
+    ],
+    "admin": [
+        {
+            "email": "janetca30@gmail.com",
+            "password": "cerezo",
+            "id": 3
         }
     ]
 }
