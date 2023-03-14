@@ -15,11 +15,9 @@ import { PersonaService } from 'src/app/service/persona.service';
 export class ExperienciaComponent implements OnInit{
   expe: Experiencia[]=[];
   isLogged = false;
-  url: string = "";
-  imageName: string = "";
-  imageUrl: string;
   
-  constructor(private experienciaService: ExperienciaService, private tokenService: TokenService,private router: Router, private storage: Storage){}
+  
+  constructor(private experienciaService: ExperienciaService, private tokenService: TokenService){}
 
   ngOnInit(): void {
     this.cargarExperiencia();
@@ -45,7 +43,5 @@ export class ExperienciaComponent implements OnInit{
       )
     }
   }
-  
-  
 }
 
