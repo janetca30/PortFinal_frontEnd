@@ -3,6 +3,7 @@ import { persona } from '../../../model/persona';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PersonaService } from 'src/app/service/persona.service';
 import { ImageService } from 'src/app/service/image.service';
+import { Storage, getDownloadURL, list, ref, uploadBytes} from '@angular/fire/storage'
 
 
 @Component({
@@ -12,11 +13,13 @@ import { ImageService } from 'src/app/service/image.service';
 })
 export class EditAcercadeComponent implements OnInit {
   persona: persona = null;
+  imageUrl: string;
   
   constructor(private activatedRouter: ActivatedRoute,
     private personaService: PersonaService, 
     private router: Router,
-    public imageService: ImageService) { }
+    public imageService: ImageService,
+    private storage: Storage) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
@@ -45,5 +48,16 @@ export class EditAcercadeComponent implements OnInit {
     const id = this.activatedRouter.snapshot.params['id'];
     const name = "perfil_"+ id;
     this.imageService.uploadImage($event, name)
+    }
+    
+    getImages(name: string) {
+      const imagesRef = ref(this.storage, `imagen/`+ name);
+      list(imagesRef)
+        .then(async response => {
+          for(let item of response.items){
+            this.imageUrl = await getDownloadURL(item);
+          }
+        })    
+        .catch(error => console.log(error))      
     }
   }

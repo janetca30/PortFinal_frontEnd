@@ -5,7 +5,7 @@
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="banner">Imagen del Banner</label>
-                    <input type="file" class="form-control" id="banner" name="banner" [(ngModel)]="persona.banner" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
+                    <input type="file" class="form-control" id="banner" name="banner" [(ngModel)]="persona.banner" (change)="uploadImage($event, 'banner')" accept=".jpg, .jpeg, .png">
                 </div>
                 <div class="banimagen">
                     <img [src]="persona.banner">
@@ -16,4 +16,4 @@
             </form>
         </div>
     </div>
-</div>
+</div> 
