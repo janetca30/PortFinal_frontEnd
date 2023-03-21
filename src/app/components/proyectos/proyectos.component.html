@@ -17,7 +17,7 @@
                     <div class="card-body">
                         <p class="card-title"><a [href]=Proyecto.linkP target="_blank"> {{Proyecto.nombreP}} </a></p>
                         <p class="card-text"> {{Proyecto.descripcionP}}</p>
-                        <p class="card-text"> {{Proyecto.fechaP | date: "dd-MM-yyyy"}}</p>
+                        <p class="card-text"> {{Proyecto.fechaP }}</p>
                         <div class="edicion">
                             <div *ngIf="isLogged" class="update">
                                 <button class="btn btn-dark " routerLink="/editproy/{{Proyecto.id}}">

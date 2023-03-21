@@ -26,6 +26,7 @@ button{
     width: 500px;
     align-items: center;
 }
-.imagen{
-    width: 50px;
+img{
+    margin-top: 20px;
+    width: 150px;
 }

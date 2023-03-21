@@ -26,3 +26,8 @@ button{
     width: 500px;
     align-items: center;
 }
+
+img{
+    margin-top: 20px;
+    width: 250px;
+}

@@ -17,7 +17,10 @@ export class EditBannerComponent implements OnInit {
   imageUrl: string;
   
 
-  constructor(private activatedRouter: ActivatedRoute, private personaService: PersonaService, private router: Router, private storage: Storage) { }
+  constructor(private activatedRouter: ActivatedRoute, 
+    private personaService: PersonaService, 
+    private router: Router, 
+    private storage: Storage) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
@@ -66,6 +69,4 @@ export class EditBannerComponent implements OnInit {
     }));
     return urls;
   }
-  
- 
 }

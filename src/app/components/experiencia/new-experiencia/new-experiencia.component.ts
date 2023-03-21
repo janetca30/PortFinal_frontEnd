@@ -23,6 +23,10 @@ export class NewExperienciaComponent implements OnInit {
 
   onCreate(): void {
     const expe = new Experiencia(this.nombreE, this.descripcionE, this.imgE, this.puestoE, this.fechaI, this.fechaT);
+    const date = new Date(this.fechaI);
+    const date1 = new Date(this.fechaT);
+    expe.fechaI =  `${date.getFullYear()}-${(date.getMonth() + 0).toString().padStart(0, '0')}-${date.getDate().toString().padStart(0, '0')}`;
+    expe.fechaT =  `${date.getFullYear()}-${(date.getMonth() + 0).toString().padStart(0, '0')}-${date.getDate().toString().padStart(0, '0')}`;
     this.experienciaService.save(expe).subscribe(
       data=>{
         alert("Experiencia añadida");
@@ -33,5 +37,6 @@ export class NewExperienciaComponent implements OnInit {
       }
     )
   }
+ 
 }
 

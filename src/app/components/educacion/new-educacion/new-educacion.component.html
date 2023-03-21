@@ -13,11 +13,11 @@
                 </div>
                 <div class="form-group">
                     <label for="anioE">Año</label>
-                    <input type="text" class="form-control" id="anioE" name="anioE" [(ngModel)]="anioE" required>
+                    <input type= "year" class="form-control" placeholder="solo numeros de 4 digitos"  max ="4" id="anioE" name="anioE" [(ngModel)]="anioE" required>
                 </div>
                 <div class="form-group">
                     <label for="imgE">Imagen</label>
-                    <input type="text" class="form-control" id="imgE" name="imgE" [(ngModel)]="imgE" required>
+                    <input type="file" class="form-control" id="imgE" name="imgE" [(ngModel)]="imgE" >
                 </div>
                 <button class="btn btn-dark ">
                     Agregar educacion

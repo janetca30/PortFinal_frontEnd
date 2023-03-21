@@ -30,4 +30,4 @@ constructor(private httpClient:HttpClient) { }
   public delete(id:number):Observable<any>{
     return this.httpClient.delete<any>(this.eduURL + `delete/${id}`);
   }
-}
+} 
