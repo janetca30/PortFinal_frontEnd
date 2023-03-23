@@ -97,6 +97,11 @@ a{
         height: 250px;
         width: 250px;
     }
+    button.btn.btn-dark.boton{
+        margin-left: 25px;
+        width: 150px;
+    }
+
 }
 
 @media screen and (min-width : 376px ) and (max-width : 425px){

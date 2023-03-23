@@ -27,17 +27,7 @@ export class NewEducacionComponent implements OnInit {
     private storage: Storage
     ) { }
 
-  ngOnInit(): void {/*
-    const id = this.activatedRouter.snapshot.params['id'];
-    this.educacionService.detail(id).subscribe(
-      data =>{
-        this.educacion = data;
-        this.getImages(this.educacion.imgE);
-      }, err =>{
-        alert("Error al modificar educacion");
-        this.router.navigate(['']);
-      }
-    )*/
+  ngOnInit(): void {
   }
 
   onCreate(): void {
@@ -53,7 +43,7 @@ export class NewEducacionComponent implements OnInit {
         this.router.navigate(['']);
       }
     )
-  }/*
+  }
   uploadImage($event: any) {
     const timestamp = new Date().getTime(); // obtener el timestamp actual
     const name = `educacion_${this.name}_${timestamp}`; // agregar el timestamp al nombre del archivo
@@ -72,9 +62,5 @@ export class NewEducacionComponent implements OnInit {
       })    
       .catch(error => console.log(error))      
   }
-
-*/
-
-
 
 }

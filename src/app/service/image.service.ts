@@ -75,5 +75,4 @@ export class ImageService {
       }
     })    
     .catch(error => console.log(error))      
-  }
-}*/
+  }*/
