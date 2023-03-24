@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "portfinal-5ec3b": {
+      "hosting": {
+        "PortFinal": [
+          "portfinal-5ec3b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "portfinal-5ec3b"
+  }
+}

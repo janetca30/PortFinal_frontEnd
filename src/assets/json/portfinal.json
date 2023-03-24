@@ -1,12 +1,12 @@
 {
-    "persona": [
+    "dato": [
         {
-            "id":"admin",
+            "id":0,
             "nombre": "Janet",
             "apellido": "Calderon Acuña de Denis",
             "puesto": "Full Stack Developer Jr.",
             "banner": "../../../assets/imagen/cerezoblanco.jpg",
-            "acerca de mi": "Estudie Contabilidad, trabaje como Administrativa por muchos años hasta llegue a ser Directora de una Empresa; mi pasión por la tecnología me lleva ahora hacia un nuevo desafío. Soy una persona responsable, multifacética, creativa, emprendedora con muchas ganas de seguir desarrollandome personal y profesionalmente.Actualmente soy autodidacta estudiando y tomando experiencia en proyectos que se me presente asi hacerme frente a nuevos desafios",
+            "acerca_de_mi": "Estudie Contabilidad, trabaje como Administrativa por muchos años hasta llegue a ser Directora de una Empresa; mi pasión por la tecnología me lleva ahora hacia un nuevo desafío. Soy una persona responsable, multifacética, creativa, emprendedora con muchas ganas de seguir desarrollandome personal y profesionalmente.Actualmente soy autodidacta estudiando y tomando experiencia en proyectos que se me presente asi hacerme frente a nuevos desafios",
             "fotoperfil": "../../../assets/imagen/janet.png"
         }
     ],
@@ -57,17 +57,17 @@
             "imgE": "../../../assets/imagen/certif.png",
             "descripcionE": "Argentina Programa #Se Programar",
             "tituloE": "Primera etapa Desarrollador Full Stack Jr",
-            "anio": "2022"
+            "anioE": "2022"
         },
         {
             "id": 2,
             "imgE": "../../../assets/imagen/constancia.jpg",
             "descripcionE": "I.E.S.T.P Argentina (Lima-Perú)",
             "tituloE": "Tecnico Contable",
-            "anio": "2002"
+            "anioE": "2002"
         }
     ],
-    "Skills": [
+    "skill": [
         {
             "id": 1,
             "nombre": "HTML",
@@ -117,11 +117,11 @@
             "imgS": "../../../assets/imagen/scomunic.png"
         }
     ],
-    "proyectos": [
+    "proyecto": [
         {
             "id": 1,
             "imgP": "../../../assets/imagen/carrusel/cerrajeriaR.png",
-            "link": "http://crosario.260mb.org/?i=1",
+            "linkP": "http://crosario.260mb.org/?i=1",
             "nombreP": "Cerrajería Rosario",
             "descripcionP": "Lista de productos",
             "fechaP": "30/10/2022"
@@ -144,18 +144,12 @@
         },
         {
             "id": 4,
-            "imgP": "../../../assets/imagen/carrusel/portfolio.PNG",
+            "imgP": "../../../assets/imagen/portafolio.PNG",
             "link": "#",
             "nombreP": "Mi Portafolio",
             "descripcionP": "Portafolio Web",
             "fechaP": "20/10/2022"
         }
-    ],
-    "admin": [
-        {
-            "email": "janetca30@gmail.com",
-            "password": "cerezo",
-            "id": 3
-        }
     ]
+    
 }

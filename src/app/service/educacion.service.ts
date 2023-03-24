@@ -7,6 +7,9 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class EducacionService {
+  saveImage(image: { name: string; url: string; }) {
+    throw new Error('Method not implemented.');
+  }
 eduURL = 'http://localhost:8080/educacion/';
 
 constructor(private httpClient:HttpClient) { }

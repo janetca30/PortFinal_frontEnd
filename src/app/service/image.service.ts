@@ -4,7 +4,7 @@ import { Storage, getDownloadURL, list, ref, uploadBytes} from '@angular/fire/st
 @Injectable({
   providedIn: 'root'
 })
-
+/*
 export class ImageService {
   url: string = "";
 
@@ -48,10 +48,10 @@ clearUrl() {
 }
 
 }
+*/
 
 
 
-/*
 export class ImageService {
   url: string = "";
 
@@ -75,4 +75,5 @@ export class ImageService {
       }
     })    
     .catch(error => console.log(error))      
-  }*/
+  }
+}

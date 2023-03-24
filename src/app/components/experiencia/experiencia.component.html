@@ -1,5 +1,5 @@
 <!--Experiencia-->
-<section class="experiencia" id="experiencia">
+<section class="experiencia" id="experiencia" *ngIf="isLogged">
     <div class="row">
         <div class="col mt-3">
             <h2><b><i>Experiencia</i></b></h2>
@@ -40,5 +40,32 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
+<section class="experiencia" id="experiencia" *ngIf="!isLogged">
+    <div class="row">
+        <div class="col mt-3">
+            <h2><b><i>Experiencia</i></b></h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="expe" *ngFor="let experiencia of datos.experiencia">
+            <div class="card" >
+                <div class="circle">
+                </div>
+                <div class="row container imagen">
+                    <div class="col-6 "  >
+                        <img [src]="experiencia.imgE" class="img-fluid rounded-start" alt="logo" id="logo">
+                    </div>
+                    <div class="col-5">
+                        <h4>{{experiencia.nombreE}}</h4>
+                        <p>{{experiencia.descripcionE}}</p>
+                        <p>{{experiencia.puestoE}}</p>
+                        <p>Inicio {{experiencia.fechaI | date: "dd-MM-yyyy"}}</p>
+                        <p>Termino {{experiencia.fechaT | date: "dd-MM-yyyy"}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>   
     </div>
 </section>

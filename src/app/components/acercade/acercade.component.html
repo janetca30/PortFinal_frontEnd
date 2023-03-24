@@ -1,5 +1,5 @@
 <!--Acerca de mi-->
-<section class="AdeMi" id="acerca">
+<section class="AdeMi" id="acerca" *ngIf="isLogged">
     <button type="submit" class="btn btn-dark boton" routerLink="/editacercade/1" *ngIf="isLogged">Editar persona
     </button>
         <div class="container text-center">
@@ -17,4 +17,23 @@
                 </div> 
             </div>
         </div>
-</section> 
+</section>
+
+<section class="AdeMi" id="acerca" *ngIf="!isLogged">    
+        <div class="container text-center">
+            <div class="row" *ngIf="datos">
+                <div class="col-lg-2 mt-3">
+                    <img src={{datos.dato[0].fotoperfil}} alt="avatar" id="avatar"/>
+                </div>
+                <div class="col-lg-3 ">
+                    <h1 id="nombre"><strong>{{datos.dato[0].nombre}}<br>{{datos.dato[0].apellido}}</strong></h1>
+                    <h4>{{datos.dato[0].puesto}}</h4>
+                </div>
+                <div class="col-lg-7 mt-3">
+                    <a href="#"><h2><b><i>Acerca de mi</i></b></h2></a>
+                    <h5><p>{{datos.dato[0].acerca_de_mi}}</p></h5>
+                </div> 
+            </div>
+        </div>
+</section>
+

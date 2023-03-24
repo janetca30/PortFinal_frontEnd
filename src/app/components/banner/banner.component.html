@@ -5,7 +5,8 @@
     </button>
     <div class="row">
         <div class="imgbanner">
-            <img [src]="persona.banner" id="cerezoblanco">
+            <img [src]="persona.banner" id="cerezoblanco" *ngIf="isLogged">
+            <img [src]="datos.dato[0].banner" id="cerezoblanco" *ngIf="!isLogged">
         </div>    
         <nav class="menu">
             <ul class="list-group list-group-horizontal">

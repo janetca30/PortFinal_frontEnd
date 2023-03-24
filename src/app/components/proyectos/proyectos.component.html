@@ -1,5 +1,5 @@
 <!--Proyectos-->
-<section class="proyectos" id="proyectos">
+<section class="proyectos" id="proyectos" *ngIf="isLogged">
     <div class="container">
         <div class="row">
             <div class="col mt-3">
@@ -30,6 +30,29 @@
                                 </button>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="proyectos" id="proyectos" *ngIf="!isLogged">
+    <div class="container">
+        <div class="row">
+            <div class="col mt-3">
+                <h2><b><i>Proyectos</i></b></h2>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row proyect">
+            <div class="proy" *ngFor="let proyecto of datos.proyecto">
+                <div class="card mb-3">
+                    <img [src]="proyecto.imgP" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-title"><a [href]="proyecto.linkP" target="_blank"> {{proyecto.nombreP}} </a></p>
+                        <p class="card-text"> {{proyecto.descripcionP}}</p>
+                        <p class="card-text"> {{proyecto.fechaP }}</p>
                     </div>
                 </div>
             </div>

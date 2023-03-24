@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import {JsonService} from './service/json.service'
 
 @Component({
   selector: 'app-root',
@@ -9,15 +9,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'PortFinal';
-  datos: any;
 
+/*
   constructor(private http:HttpClient ){
     this.http.get('./assets/json/portfinal.json').subscribe(datos => {
-      this.datos = datos;
+      this.datoj = datos;
     });
   }
 
-
+*/
 
 }
 

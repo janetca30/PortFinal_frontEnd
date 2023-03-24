@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { persona } from 'src/app/model/persona';
 import { PersonaService } from 'src/app/service/persona.service';
 import { TokenService } from 'src/app/service/token.service';
+import { JsonService } from 'src/app/service/json.service';
 
 @Component({
   selector: 'app-banner',
@@ -11,9 +12,10 @@ import { TokenService } from 'src/app/service/token.service';
 export class BannerComponent implements OnInit{
   isLogged = false;
   persona: persona = null;
+  datos : any = {};
 
 
-  constructor(public personaService: PersonaService, private tokenService: TokenService) { }
+  constructor(public personaService: PersonaService, private tokenService: TokenService,private jsonService : JsonService) { }
   
   ngOnInit(): void{
 
@@ -22,7 +24,15 @@ export class BannerComponent implements OnInit{
       this.isLogged = true;
     }else {
       this.isLogged = false;
+    };
+    this.jsonService.obtenerDatos().subscribe(
+      (data : any ) => {
+      this.datos = data;
+    },
+    (error: any) => {
+      console.log(error);
     }
+    ); 
     
   }
   

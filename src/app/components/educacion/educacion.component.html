@@ -1,5 +1,5 @@
 <!--Educacion-->
-<section class="educacion" id="educacion">
+<section class="educacion" id="educacion" *ngIf="isLogged">
     <div class="container">
         <div class="row">
             <div class="col mt-3">
@@ -30,6 +30,27 @@
             </div>
             <div class="col-5" id="imagen">
                 <img src={{Educacion.imgE}} alt="certif" id="imagen">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="educacion" id="educacion" *ngIf="!isLogged">
+    <div class="container">
+        <div class="row">
+            <div class="col mt-3">
+                <h2><b><i>Educación</i></b></h2>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row edu" *ngFor="let educacion of datos.educacion">
+            <div class="textedu col-6 mt-5 ">
+                <p class="peduc">{{educacion.tituloE}}</p>
+                <p class="peduc"><i>{{educacion.descripcionE}}</i></p>
+                <p class="peduc">{{educacion.anioE | date:"yyyy"}}</p>
+            </div>
+            <div class="col-5" id="imagen">
+                <img [src]="educacion.imgE" alt="certif" id="imagen">
             </div>
         </div>
     </div>

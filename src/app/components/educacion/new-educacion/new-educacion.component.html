@@ -13,7 +13,7 @@
                 </div>
                 <div class="form-group">
                     <label for="anioE">Año</label>
-                    <input type= "year" class="form-control" placeholder="solo numeros de 4 digitos"  max ="2000" id="anioE" name="anioE" [(ngModel)]="anioE" required>
+                    <input type="number" class="form-control" placeholder="solo números de 4 dígitos" min="1900" max="2099" id="anioE" name="anioE" [(ngModel)]="anioE" required>
                 </div>
                 <div class="form-group">
                     <label for="imgE">Imagen</label>
