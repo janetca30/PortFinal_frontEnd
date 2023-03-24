@@ -1,21 +1,21 @@
-    <!--seccion de navbar-->
-    <section id="navbar">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <div>
-                    <a class="navbar-brand" href="">
-                        <img src="https://i.imgur.com/Oi75AQU.png" id="ArgPr">
-                    </a>
-                </div>
-                <button type="submit" class="btn btn-dark boton" routerLink="/nuevared" *ngIf="isLogged">Nueva Red Social
-                </button>  
+<!--seccion de navbar-->
+<section id="navbar">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div>
+                <a class="navbar-brand" href="">
+                    <img src="https://i.imgur.com/Oi75AQU.png" id="ArgPr">
+                </a>
+            </div>
+            <button type="submit" class="btn btn-dark boton" routerLink="/nuevared" *ngIf="isLogged">Nueva Red Social
+            </button>
             <!--Redes Sociales-->
-            <div class="row">
-                <div class="redsocial">
+            <div class="row" *ngIf="isLogged">
+                <div class="redsocial" >
                     <div class="red" *ngFor="let Redes of redsocial">
                         <ul class="redlist">
                             <a href={{Redes.link}} target="_blank">
-                            <img class="icono" src={{Redes.icono}}></a>
+                                <img class="icono" src={{Redes.icono}}></a>
                         </ul>
                         <div class="botones">
                             <div *ngIf="isLogged" class="update">
@@ -30,19 +30,30 @@
                             </div>
                         </div>
                     </div>
-                    <div *ngIf="!isLogged">        
-                        <button class="btn pink" (click)="login()">
-                            <img src="https://i.imgur.com/eAcId4s.png" id="bloqueo">
-                        </button>
-                    </div>
-                    <div *ngIf="isLogged" class="blogin" (click)="onLogout()">                                
-                        <button class="btn pink">
-                            <img src="https://i.imgur.com/hBnD268.png" id="desbloqueo">
-                        </button>
+                </div>
+            </div>
+            <div class="row" *ngIf="!isLogged">
+                <div class="redsocial">
+                    <div class="red" *ngFor="let red of datos.red">
+                        <ul class="redlist">
+                            <a [href]="red.link" target="_blank">
+                                <img class="icono" [src]="red.icono"></a>
+                        </ul>
                     </div>
                 </div>
             </div>
-                            
-            
-        
-
+            <div class="boton login-logout">
+                <div *ngIf="!isLogged">
+                    <button class="btn pink" (click)="login()">
+                        <img src="https://i.imgur.com/eAcId4s.png" id="bloqueo">
+                    </button>
+                </div>
+                <div *ngIf="isLogged" class="blogin" (click)="onLogout()">
+                    <button class="btn pink">
+                        <img src="https://i.imgur.com/hBnD268.png" id="desbloqueo">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+</section>

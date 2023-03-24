@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { EducacionService } from '../../../service/educacion.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Educacion } from 'src/app/model/educacion';
-import { ImageService } from 'src/app/service/image.service';
-import { getDownloadURL, list, ref } from '@angular/fire/storage';
-import { AngularFireStorage } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-new-educacion',
@@ -23,10 +20,7 @@ export class NewEducacionComponent implements OnInit {
 
   constructor(private educacionService: EducacionService,
     private router: Router,
-    private activatedRouter: ActivatedRoute,
-    public imageService: ImageService,
-    private storage: AngularFireStorage
-    ) { }
+    private activatedRouter: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
@@ -43,23 +37,6 @@ export class NewEducacionComponent implements OnInit {
       }
     )
   }
-  uploadImage($event: any) {
-    const timestamp = new Date().getTime(); // obtener el timestamp actual
-    const name = `educacion_${this.name}_${timestamp}`; // agregar el timestamp al nombre del archivo
-    this.imageService.uploadImage($event, name);
-  }
-  
-  
-
-  getImages(name: string) {
-    const imagesRef = ref(this.storage, `imagen/${name}`);
-    list(imagesRef)
-      .then(async response => {
-        for(let item of response.items){
-          this.imageUrl = await getDownloadURL(item);
-        }
-      })    
-      .catch(error => console.log(error))      
-  }
-
+ 
 }
+

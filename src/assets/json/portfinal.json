@@ -10,23 +10,23 @@
             "fotoperfil": "../../../assets/imagen/janet.png"
         }
     ],
-    "redes": [
+    "red": [
         {
             "id": 1,
             "icono": "../../../assets/imagen/redes/bwhatsapp.png",
-            "url": "https://api.whatsapp.com/send?phone=3415086762",
+            "link": "https://api.whatsapp.com/send?phone=3415086762",
             "nombre": "whatsap"
         },
         {
             "id": 2,
             "icono": "../../../assets/imagen/redes/bgithub.png",
-            "url": "https://github.com/janetca30",
+            "link": "https://github.com/janetca30",
             "nombre": "github"
         },
         {
             "id": 3,
             "icono": "../../../assets/imagen/redes/blinkedin.png",
-            "url": "https://www.linkedin.com/in/janet-calderon-559ab6240/",
+            "link": "https://www.linkedin.com/in/janet-calderon-559ab6240/",
             "nombre": "linkedin"
         }
     ],
@@ -72,55 +72,55 @@
             "id": 1,
             "nombre": "HTML",
             "porcentaje": 70,
-            "imgS": "../../../assets/imagen/html5.png"
+            "imgS": "../../../assets/imagen/skills/html5.png"
         },
         {
             "id": 2,
             "nombre": "CSS",
             "porcentaje": 70,
-            "imgS": "../../../assets/imagen/css.png"
+            "imgS": "../../../assets/imagen/skills/css.png"
         },
         {
             "id": 3,
             "nombre": "Angular",
             "porcentaje": 40,
-            "imgS": "../../../assets/imagen/angular.png"
+            "imgS": "../../../assets/imagen/skills/angular.png"
         },
         {
             "id": 4,
             "nombre": "MySql",
             "porcentaje": 30,
-            "imgS": "../../../assets/imagen/mysql.png"
+            "imgS": "../../../assets/imagen/skills/mysql.png"
         },
         {
             "id": 5,
             "nombre": "Sprint Boot",
             "porcentaje": 30,
-            "imgS": "../../../assets/imagen/spring.png"
+            "imgS": "../../../assets/imagen/skills/spring.png"
         },
         {
             "id": 6,
             "nombre": "Trabajo en Equipo",
             "porcentaje": 100,
-            "imgS": "../../../assets/imagen/scolaborativo.png"
+            "imgS": "../../../assets/imagen/skills/scolaborativo.png"
         },
         {
             "id": 7,
             "nombre": "Autodidacta",
             "porcentaje": 100,
-            "imgS": "../../../assets/imagen/sautodidac.png"
+            "imgS": "../../../assets/imagen/skills/sautodidac.png"
         },
         {
             "id": 8,
             "nombre": "Comunicativa",
             "porcentaje": 100,
-            "imgS": "../../../assets/imagen/scomunic.png"
+            "imgS": "../../../assets/imagen/skills/scomunic.png"
         }
     ],
     "proyecto": [
         {
             "id": 1,
-            "imgP": "../../../assets/imagen/carrusel/cerrajeriaR.png",
+            "imgP": "../../../assets/imagen/proyect/cerrajeriaR.png",
             "linkP": "http://crosario.260mb.org/?i=1",
             "nombreP": "Cerrajería Rosario",
             "descripcionP": "Lista de productos",
@@ -128,24 +128,24 @@
         },
         {
             "id": 2,
-            "imgP": "../../../assets/imagen/carrusel/receta.png",
-            "link": "http://pruebas.260mb.org/?i=1",
-            "nombreP": "Recetario",
-            "descripcionP": "Buscador recetas",
+            "imgP": "../../../assets/imagen/proyect/mint.png",
+            "linkP": "https://janetca30.github.io/MindHub/",
+            "nombreP": "MinT",
+            "descripcionP": "Proyecto",
             "fechaP": "30/09/2022"
         },
         {
             "id": 3,
-            "imgP": "../../../assets/imagen/carrusel/dados.PNG",
-            "link": "http://dados.260mb.org/",
-            "nombreP": "Dado",
-            "descripcionP": "Dado",
+            "imgP": "../../../assets/imagen/proyect/cerrajeria2.PNG",
+            "linkP": "https://janetca30.github.io/cerrajeria/",
+            "nombreP": "Cerrajeria",
+            "descripcionP": "Venta",
             "fechaP": "20/10/2022"
         },
         {
             "id": 4,
-            "imgP": "../../../assets/imagen/portafolio.PNG",
-            "link": "#",
+            "imgP": "../../../assets/imagen/proyect/portafolio.PNG",
+            "linkP": "#",
             "nombreP": "Mi Portafolio",
             "descripcionP": "Portafolio Web",
             "fechaP": "20/10/2022"

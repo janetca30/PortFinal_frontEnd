@@ -14,6 +14,7 @@ import { Storage, getDownloadURL, list, ref, uploadBytes} from '@angular/fire/st
 export class EditAcercadeComponent implements OnInit {
   persona: persona = null;
   imageUrl: string;
+  name: string;
   
   constructor(private activatedRouter: ActivatedRoute,
     private personaService: PersonaService, 
