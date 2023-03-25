@@ -109,5 +109,27 @@ a{
         height: 250px;
         width: 300px;
     }
+    button.btn.btn-dark.boton{
+        margin-left: 35px;
+        width: 300px;
+    }
 }
 
+@media screen and (min-width : 426px ) and (max-width : 500px){
+    button.btn.btn-dark.boton{
+        margin-left: 25px;
+        width: 370px;
+    }
+}
+
+@media screen and (min-width : 501px ) and (max-width : 767px){
+	button.btn.btn-dark.boton{
+		margin-left: 40px;
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: center;
+		align-items: center;
+	}
+}

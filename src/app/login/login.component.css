@@ -1,4 +1,3 @@
-
 .loguearse{
     height: 54vh;
     
@@ -18,4 +17,33 @@ a{
     color:#e71063
 }
 
+@media screen and (min-width : 320px ) and (max-width : 343.99px){
+    
+    section{
+        width: 320px;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .container.text-center{
+        width: 320px;
+        height: 250px;
+        margin-left: -70px;
+    }
+    .modal-body{
+        margin-top: -50px;
+        display: flex;
+        justify-content: center;
+    }
+    form{
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
 
+    }
+}

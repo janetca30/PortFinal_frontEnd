@@ -12,9 +12,8 @@
     <div class="container">
         <div class="row">
             <div class="skills">
-                <div class="text-center col-sm-4 col-m-4 col-lg-4 circle" *ngFor="let Skills of skills">
+                <div class="text-center col-sm-4 col-m-5 col-lg-4 circle" *ngFor="let Skills of skills">
                     <h5>{{Skills.nombre}} {{Skills.porcentaje}}%</h5>
-                    <h6></h6>
                     <circle-progress [percent]="(Skills.porcentaje)" [radius]="50" [imageSrc]="(Skills.imgS)"
                         [imageHeight]="30" [imageWidth]="30" [showImage]="true" [showUnits]="false"
                         [outerStrokeWidth]="16" [innerStrokeWidth]="8" [outerStrokeColor]="'#c51a51'"
@@ -48,7 +47,6 @@
             <div class="skills">
                 <div class="text-center col-sm-4 col-m-4 col-lg-4 circle" *ngFor="let skill of datos.skill">
                     <h5>{{skill.nombre}} {{skill.porcentaje}} %</h5>
-                    <h6></h6>
                     <circle-progress [percent]="skill.porcentaje" [radius]="50" [imageSrc]="skill.imgS"
                         [imageHeight]="30" [imageWidth]="30" [showImage]="true" [showUnits]="false"
                         [outerStrokeWidth]="16" [innerStrokeWidth]="8" [outerStrokeColor]="'#c51a51'"

@@ -28,8 +28,8 @@
                     </button>
                 </div>
             </div>
-            <div class="col-5" id="imagen">
-                <img src={{Educacion.imgE}} alt="certif" id="imagen">
+            <div class="col-5" id="boximagen">
+                <img [src]="Educacion.imgE" alt="certif" id="imagen">
             </div>
         </div>
     </div>
@@ -49,7 +49,7 @@
                 <p class="peduc"><i>{{educacion.descripcionE}}</i></p>
                 <p class="peduc">{{educacion.anioE | date:"yyyy"}}</p>
             </div>
-            <div class="col-5" id="imagen">
+            <div class="col-5" id="boximagen">
                 <img [src]="educacion.imgE" alt="certif" id="imagen">
             </div>
         </div>
