@@ -3,7 +3,8 @@ import { persona } from '../../../model/persona';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PersonaService } from 'src/app/service/persona.service';
 import { ImageService } from 'src/app/service/image.service';
-import { Storage, getDownloadURL, list, ref, uploadBytes} from '@angular/fire/storage'
+import { Storage, getDownloadURL, listAll, ref, uploadBytes} from '@angular/fire/storage'
+
 
 
 @Component({
@@ -31,7 +32,8 @@ export class EditAcercadeComponent implements OnInit {
         alert("Error al modificar persona");
         this.router.navigate(['']);
       }
-    )  
+    ),
+    this.getImages('')  
   }
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
@@ -52,8 +54,8 @@ export class EditAcercadeComponent implements OnInit {
     }
     
     getImages(name: string) {
-      const imagesRef = ref(this.storage, `imagen/`+ name);
-      list(imagesRef)
+      const imagesRef = ref(this.storage, `imagen/`);
+      listAll(imagesRef)
         .then(async response => {
           for(let item of response.items){
             this.imageUrl = await getDownloadURL(item);
@@ -61,4 +63,5 @@ export class EditAcercadeComponent implements OnInit {
         })    
         .catch(error => console.log(error))      
     }
+    
   }

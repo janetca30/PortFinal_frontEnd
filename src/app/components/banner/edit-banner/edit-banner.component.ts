@@ -50,7 +50,7 @@ export class EditBannerComponent implements OnInit {
 
   uploadImage($event: any, name: string){
     const file = $event.target.files[0];
-    const imgRef = ref(this.storage, `imagen/`+ name);
+    const imgRef = ref(this.storage, `banner/` + name);
     uploadBytes(imgRef, file)
       .then(response => {
         this.imageName = name;

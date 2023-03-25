@@ -45,6 +45,7 @@ export class EditEducacionComponent implements OnInit {
         this.router.navigate(['']);
       }
     )
+    console.log(id);
     
   }
 
@@ -57,7 +58,7 @@ export class EditEducacionComponent implements OnInit {
   
 
   getImages(name: string) {
-    const imagesRef = ref(this.storage, `imagen/${name}`);
+    const imagesRef = ref(this.storage, `imagen`);
     list(imagesRef)
       .then(async response => {
         for(let item of response.items){
@@ -67,4 +68,3 @@ export class EditEducacionComponent implements OnInit {
       .catch(error => console.log(error))      
   }
 }
- 

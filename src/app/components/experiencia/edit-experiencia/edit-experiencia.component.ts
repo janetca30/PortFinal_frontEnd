@@ -3,7 +3,7 @@ import { Experiencia } from '../../../model/experiencia';
 import { ExperienciaService } from '../../../service/experiencia.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ImageService } from 'src/app/service/image.service';
-import { Storage, getDownloadURL, list, ref, } from '@angular/fire/storage';
+import { Storage, getDownloadURL, list, ref } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-edit-experiencia',
@@ -11,7 +11,7 @@ import { Storage, getDownloadURL, list, ref, } from '@angular/fire/storage';
   styleUrls: ['./edit-experiencia.component.css']
 })
 export class EditExperienciaComponent implements OnInit{
-  expLab : Experiencia = null;
+  expe : Experiencia = null;
   imageUrl: string;
   name: string;
 
@@ -25,8 +25,8 @@ export class EditExperienciaComponent implements OnInit{
     const id = this.activatedRouter.snapshot.params['id'];
     this.experienciaService.detail(id).subscribe(
       data =>{
-        this.expLab = data;
-        this.getImages(this.expLab.imgE);
+        this.expe = data;
+        this.getImages(this.expe.imgE);
       }, err =>{
         alert("Error al modificar experiencia");
         this.router.navigate(['']);
@@ -37,8 +37,8 @@ export class EditExperienciaComponent implements OnInit{
 
   onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.expLab.imgE = this.imageService.url;
-    this.experienciaService.update(id, this.expLab).subscribe(
+    this.expe.imgE = this.imageService.url;
+    this.experienciaService.update(id, this.expe).subscribe(
       data => {
         this.router.navigate(['']);
       },err =>{
@@ -46,6 +46,7 @@ export class EditExperienciaComponent implements OnInit{
         this.router.navigate(['']);
       }
     )
+    console.log(this.expe);
     
   }
   
@@ -55,8 +56,11 @@ export class EditExperienciaComponent implements OnInit{
     this.imageService.uploadImage($event, name);
   }
 
+
+  
+
   getImages(name: string) {
-    const imagesRef = ref(this.storage, `imagen/${name}`);
+    const imagesRef = ref(this.storage, `imagen`);
     list(imagesRef)
       .then(async response => {
         for(let item of response.items){

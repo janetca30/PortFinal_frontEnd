@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Proyecto } from 'src/app/model/proyecto';
 import { ProyectoService } from 'src/app/service/proyecto.service';
 import { ImageService } from 'src/app/service/image.service';
-import { Storage, getDownloadURL, list, ref, uploadBytes} from '@angular/fire/storage';
+import { Storage, getDownloadURL, list, ref} from '@angular/fire/storage';
 
 
 @Component({
@@ -55,17 +55,9 @@ export class EditProyectoComponent implements OnInit{
     const name = `proyect_${this.name}_${timestamp}`; // agregar el timestamp al nombre del archivo
     this.imageService.uploadImage($event, name);
   }
-  
 
-
-  /*uploadImage($event:any){
-    //const id = this.activatedRouter.snapshot.params['id'];
-    const name = "proyect_"+ this.name;
-    this.imageService.uploadImage($event, name);
-    }*/
-    
     getImages(name: string) {
-      const imagesRef = ref(this.storage, `imagen/${name}`);
+      const imagesRef = ref(this.storage, `imagen`);
       list(imagesRef)
         .then(async response => {
           for(let item of response.items){
