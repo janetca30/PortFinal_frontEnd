@@ -98,9 +98,14 @@ a{
         width: 250px;
     }
     button.btn.btn-dark.boton{
-        margin-left: 25px;
-        width: 150px;
-    }
+		margin-left: 20px;
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: center;
+		align-items: center;
+	}
 
 }
 

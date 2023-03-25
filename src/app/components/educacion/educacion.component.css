@@ -66,7 +66,16 @@ a{
     margin-top: 10px;
 }
 
-@media screen and (min-width : 320px ) and (max-width : 343.99px){
+@media screen and (min-width : 320px ) and (max-width : 344px){
+    button.btn.btn-dark.boton{
+		margin-left: 40px;
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: center;
+		align-items: center;
+	}
     .row.edu{
         width: 320px;
         display: flex;
@@ -78,67 +87,81 @@ a{
     }
     
     #boximagen{
-        width: 320px; 
+        width: 300px;
+        margin-top: 0px; 
     }
     img#imagen{
         padding-left: 0px;
-        margin-top: -10px;
+        margin-top: 0px;
+    }
+    .col-1.edicion{
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    .update{
+        margin-top: -20px;
+        margin-left: -90px;
+    }
+    .delete{
+        margin-top: -40px;
+        margin-left: 30px;
     }
 }
 
-@media (max-width: 1024px) {
-    h2{
-        text-align: center;
-        margin-left : -5%;
-    }
-    .edu{
-        width: 100%;
-        height: 400%;
-        position: relative;
-    }
-    .texto{
-        width: 150px;
-        height: 50%;
-    }
-    .edicion{
-        padding-top: 2px;
-
-    }
-    #imagen{
-        margin-left: 25%;
-        
-    }
-
-}
-@media (max-width: 500px) {
-	h2{
-        margin-left: 5%;
-    }
-    .boton{
-		width: 70%;
-        padding-right: 15px;
-        margin-left: 12%;
-
+@media screen and (min-width : 345px ) and (max-width : 500px){
+    button.btn.btn-dark.boton{
+		margin-left: 40px;
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: center;
+		align-items: center;
 	}
-    .edu{
-        width: 150px;
-        height: 100%;
-        right: 0;
+    .container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
     }
-    .texto{
-        margin-left: -97px;
-        position: relative;
+    .row.edu{
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
     }
-    .edicion{
-        margin-left: -450px;
-        margin-top: -255px;
+    
+    #boximagen{
+        width: 300px;
+        margin-top: 0px; 
     }
-    #imagen{
-        margin-left: -1px;
-        padding-left: 25px;
-        margin-top: 65px;
+    img#imagen{
+        padding-left: 0px;
+        margin-top: 0px;
+    }
+    .col-1.edicion{
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    .update{
+        margin-top: -20px;
+        margin-left: -90px;
+    }
+    .delete{
+        margin-top: -40px;
+        margin-left: 30px;
     }
 }
+
 @media screen and (min-width : 501px ) and (max-width : 767px){
 	button.btn.btn-dark.boton{
 		margin-left: 40px;
@@ -149,25 +172,48 @@ a{
 		align-content: center;
 		align-items: center;
 	}
-	h2{
-        margin-left: 5%;
+    .col-1.edicion{
+        flex-direction: row;
+        justify-content: center;
+        margin-top: -300px;
+        margin-left: 200px;
+    }
+    #boximagen{
+        width: 300px;
+        margin-top: -260px;
+        margin-left: 390px; 
+    }
+    img#imagen{
+        padding-left: 0px;
+        margin-top: 0px;
     }
     .edu{
         width: 150px;
-        height: 100%;
-        right: 0;
     }
-    .texto{
-        margin-left: -97px;
-        position: relative;
+}
+
+@media screen and (min-width : 768px ) and (max-width : 991px){
+	button.btn.btn-dark.boton{
+		margin-left: 40px;
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: center;
+		align-items: center;
+	}
+    .col-1.edicion{
+        flex-direction: row;
+        justify-content: center;
+        margin-top: -20px;
+        margin-left: -20px;
     }
-    .edicion{
-        margin-left: -450px;
-        margin-top: -155px;
+    .textedu{
+        margin-left: -280px;
     }
-    #imagen{
-        margin-left: -1px;
-        padding-left: 95px;
-        margin-top: 55px;
+    #boximagen{
+        width: 300px;
+        margin-top: -160px;
+        margin-left: 390px; 
     }
 }
