@@ -7,7 +7,7 @@ import { persona } from '../model/persona';
   providedIn: 'root'
 })
 export class PersonaService { 
-  URL = 'https://sensitive-elsa-janetca30.koyeb.app/persona/';
+  URL = 'https://portfinal-janetca30.koyeb.app/persona/';
 
   constructor(private httpClient: HttpClient) { }
 

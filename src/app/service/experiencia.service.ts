@@ -7,7 +7,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  expURL= 'https://sensitive-elsa-janetca30.koyeb.app/explab/';
+  expURL= 'https://portfinal-janetca30.koyeb.app/explab/';
   
   constructor(private httpClient:HttpClient) { }
 

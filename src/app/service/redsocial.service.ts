@@ -7,7 +7,7 @@ import { RedSocial } from '../model/redsocial';
   providedIn: 'root'
 })
 export class RedsocialService {
-  redURL = 'https://sensitive-elsa-janetca30.koyeb.app/';
+  redURL = 'https://portfinal-janetca30.koyeb.app/';
 
   constructor(private httpClient: HttpClient) { }
 

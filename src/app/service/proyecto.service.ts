@@ -7,7 +7,7 @@ import { Proyecto } from '../model/proyecto';
   providedIn: 'root'
 })
 export class ProyectoService {
-  proyURL = 'https://sensitive-elsa-janetca30.koyeb.app/';
+  proyURL = 'https://portfinal-janetca30.koyeb.app/';
 
   constructor(private httpClient: HttpClient) { }
 

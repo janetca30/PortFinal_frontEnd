@@ -7,7 +7,7 @@ import { Skills } from '../model/skills';
   providedIn: 'root'
 })
 export class SkillsService {
-  skiURL = 'https://sensitive-elsa-janetca30.koyeb.app/';
+  skiURL = 'https://portfinal-janetca30.koyeb.app/';
 
   constructor(private httpClient: HttpClient) { }
 
