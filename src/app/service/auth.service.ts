@@ -9,7 +9,7 @@ import { JwtDto } from '../model/jwt-dto';
     providedIn:'root'
 })
 export class AuthService {
-    authURL = 'https://portfinal-janetca30.koyeb.app/auth/';
+    authURL = 'https://portfinalb-janetca30.koyeb.app/auth/';
 
     constructor(private httpClient: HttpClient) { }
 
